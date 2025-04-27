@@ -46,7 +46,7 @@ shadow_mesh = SubResource("ArrayMesh_dy052")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1c3sx"]
 radius = 0.22997
-height = 1.47379
+height = 1.29984
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_clnm7"]
 
@@ -54,6 +54,7 @@ height = 1.47379
 process_physics_priority = 1
 axis_lock_angular_x = true
 axis_lock_angular_z = true
+mass = 0.4
 script = ExtResource("1_fyse4")
 
 [node name="bread_Default OBJ_002_0" type="MeshInstance3D" parent="."]
@@ -62,7 +63,7 @@ mesh = SubResource("ArrayMesh_2j22f")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0465873, 0.157823, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0465873, 0.187566, 0.0889423)
 shape = SubResource("CapsuleShape3D_1c3sx")
 
 [node name="Area3D" type="Area3D" parent="."]

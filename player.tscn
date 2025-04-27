@@ -28,6 +28,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.349975, 0)
 visible = false
 target_position = Vector3(0, 0, -4)
 
-[node name="Marker3D" type="Marker3D" parent="Head/Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.6245)
-visible = false
+[node name="CarryObjectMarker" type="Marker3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.56319)
+gizmo_extents = 2.4

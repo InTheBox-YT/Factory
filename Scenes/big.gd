@@ -13,7 +13,7 @@ func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 	player.interact_object.connect(_set_selected)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	$CollisionShape3D.disabled = player == get_parent()
 
 func _physics_process(delta: float) -> void:
