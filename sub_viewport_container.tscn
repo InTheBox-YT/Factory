@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://btmcgm2odkmyh"]
+
+[ext_resource type="Shader" uid="uid://8la2r6lcep5x" path="res://pixel.gdshader" id="1_rbxnt"]
+[ext_resource type="PackedScene" uid="uid://50f0tmfk3kso" path="res://world.tscn" id="2_gcxxy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_niex8"]
+shader = ExtResource("1_rbxnt")
+shader_parameter/change_color_depth = true
+shader_parameter/target_color_depth = 5
+shader_parameter/dithering = true
+shader_parameter/scale_resolution = true
+shader_parameter/target_resolution_scale = 3
+shader_parameter/enable_recolor = false
+
+[node name="SubViewportContainer" type="SubViewportContainer"]
+material = SubResource("ShaderMaterial_niex8")
+offset_right = 1154.0
+offset_bottom = 651.0
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(1152, 648)
+
+[node name="World" parent="SubViewport" instance=ExtResource("2_gcxxy")]
