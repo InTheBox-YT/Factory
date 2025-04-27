@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=4 uid="uid://sa7o45um307m"]
+[gd_scene load_steps=25 format=4 uid="uid://sa7o45um307m"]
 
 [ext_resource type="Texture2D" uid="uid://dhnk808dnvcip" path="res://big/BigBoss_MRigFix_0.png" id="1_hhtol"]
+[ext_resource type="Script" uid="uid://cg4774hiq21vu" path="res://Scenes/big.gd" id="1_w1nl0"]
 [ext_resource type="Texture2D" uid="uid://1lpu8wv05wny" path="res://big/BigBoss_MRigFix_1.png" id="2_40d6d"]
 [ext_resource type="Texture2D" uid="uid://dafdbycs1mhmd" path="res://big/BigBoss_MRigFix_2.png" id="3_r2sxd"]
 [ext_resource type="Texture2D" uid="uid://cjwc4xja671kb" path="res://big/BigBoss_MRigFix_3.png" id="4_bpm4o"]
@@ -358,7 +359,8 @@ bind/40/pose = Transform3D(-99.8492, 5.34828, -1.24037, -1.15093, 1.69965, 99.97
 radius = 0.129827
 height = 0.779272
 
-[node name="StaticBody3D" type="StaticBody3D"]
+[node name="StaticBody3D" type="CharacterBody3D"]
+script = ExtResource("1_w1nl0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 

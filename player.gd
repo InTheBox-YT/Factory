@@ -58,7 +58,7 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-@onready var camera = $Camera3D
+@onready var camera = $Head/Camera3D
 var camera_speed = 0.1
 
 #
