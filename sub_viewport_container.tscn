@@ -1,16 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnpofjqnmph6h"]
+[gd_scene load_steps=4 format=3 uid="uid://dnpofjqnmph6h"]
 
-[ext_resource type="Shader" path="res://pixel.gdshader" id="1_rbxnt"]
+[ext_resource type="Shader" uid="uid://8la2r6lcep5x" path="res://pixel.gdshader" id="1_rbxnt"]
 [ext_resource type="PackedScene" uid="uid://50f0tmfk3kso" path="res://world.tscn" id="2_gcxxy"]
-[ext_resource type="PackedScene" uid="uid://d2y2jer4h4wp6" path="res://Materials/camera_3d.tscn" id="3_gcxxy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_niex8"]
 shader = ExtResource("1_rbxnt")
 shader_parameter/change_color_depth = true
-shader_parameter/target_color_depth = 5
+shader_parameter/target_color_depth = 4
 shader_parameter/dithering = true
 shader_parameter/scale_resolution = true
-shader_parameter/target_resolution_scale = 3
+shader_parameter/target_resolution_scale = 4
 shader_parameter/enable_recolor = false
 
 [node name="SubViewportContainer" type="SubViewportContainer"]
@@ -30,10 +29,3 @@ size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="World" parent="SubViewport" instance=ExtResource("2_gcxxy")]
-
-[node name="SubViewport2" type="SubViewport" parent="."]
-handle_input_locally = false
-size = Vector2i(349, 316)
-render_target_update_mode = 4
-
-[node name="Camera3D" parent="SubViewport2" instance=ExtResource("3_gcxxy")]

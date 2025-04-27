@@ -1,7 +1,10 @@
 extends RigidBody3D
 
-@export var lifetime: float = 15.0
+@onready var death_detector: Area3D = $Area3D
 
 func _ready() -> void:
-	await get_tree().create_timer(lifetime).timeout
-	queue_free()
+	death_detector.body_entered.connect(_on_death_detector_body_entered)
+
+func _on_death_detector_body_entered(body: Node) -> void:
+	if body.is_in_group("PartDeath"):
+		queue_free()

@@ -24,6 +24,10 @@ window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/vsync/vsync_mode=0
 
+[global_group]
+
+PartDeath="kills the scrap parts"
+
 [input]
 
 W={
@@ -70,4 +74,5 @@ quit={
 [physics]
 
 common/physics_ticks_per_second=45
+3d/physics_engine="GodotPhysics3D"
 common/physics_interpolation=true

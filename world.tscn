@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://50f0tmfk3kso"]
+[gd_scene load_steps=15 format=3 uid="uid://50f0tmfk3kso"]
 
 [ext_resource type="Texture2D" uid="uid://1f037kqr6q4g" path="res://Materials/concrete.png" id="1_036b0"]
 [ext_resource type="PackedScene" uid="uid://dv1ngyts0h8eh" path="res://pick_up.tscn" id="2_dwbse"]
@@ -40,6 +40,11 @@ diffuse_mode = 1
 albedo_texture = ExtResource("1_036b0")
 uv1_scale = Vector3(0.15, 0.15, 0.15)
 uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pkg7o"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pkg7o"]
+viewport_path = NodePath("SubViewport")
 
 [node name="World" type="Node3D"]
 
@@ -85,6 +90,36 @@ material = SubResource("StandardMaterial3D_fj7yv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.24829, 1.79828, -0.929725)
 use_collision = true
 size = Vector3(0.503418, 4.59656, 9.7662)
+material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="CSGBox3D26" type="CSGBox3D" parent="."]
+transform = Transform3D(0.991151, 0, 0.132741, 0, 1, 0, -0.132741, 0, 0.991151, -6.11704, 1.7281, 2.68524)
+use_collision = true
+size = Vector3(0.503418, 1.63757, 1.82697)
+material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="."]
+transform = Transform3D(0.991151, 0, 0.132741, 0, 1, 0, -0.132741, 0, 0.991151, -5.73334, 1.7281, 3.46027)
+use_collision = true
+size = Vector3(0.0917053, 1.63757, 0.188751)
+material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="CSGBox3D33" type="CSGBox3D" parent="."]
+transform = Transform3D(0.991151, 0, 0.132741, 0, 1, 0, -0.132741, 0, 0.991151, -5.94063, 1.7281, 1.83737)
+use_collision = true
+size = Vector3(0.0681763, 1.63757, 0.188751)
+material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="CSGBox3D34" type="CSGBox3D" parent="."]
+transform = Transform3D(0.991151, 0, 0.132741, 0, 1, 0, -0.132741, 0, 0.991151, -5.82927, 2.49254, 2.65889)
+use_collision = true
+size = Vector3(0.0681763, 0.108704, 1.48957)
+material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="CSGBox3D35" type="CSGBox3D" parent="."]
+transform = Transform3D(0.991151, 0, 0.132741, 0, 1, 0, -0.132741, 0, 0.991151, -5.82927, 0.970775, 2.65889)
+use_collision = true
+size = Vector3(0.0681763, 0.108704, 1.48957)
 material = SubResource("StandardMaterial3D_fj7yv")
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="."]
@@ -134,6 +169,19 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 21.369
 use_collision = true
 size = Vector3(30.1784, 0.952744, 2.05344)
 material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="PartDeath" type="CSGBox3D" parent="." groups=["PartDeath"]]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 12.9199, 2.19167, 5.02295)
+use_collision = true
+size = Vector3(0.611747, 3.81475, 2.05344)
+material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PartDeath" groups=["PartDeath"]]
+transform = Transform3D(2.11324, 0, 0, 0, 1, 0, 0, 0, 1.66247, -0.643155, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PartDeath/StaticBody3D" groups=["PartDeath"]]
+transform = Transform3D(1, 0, 0, 0, 3.79056, 0, 0, 0, 1, 0.17227, -0.406821, 0)
+shape = SubResource("BoxShape3D_pkg7o")
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.666904, 1.79828, 6.22238)
@@ -269,9 +317,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59821, 3.02416, -9.0675)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59821, 3.02416, -4.22558)
 
 [node name="Dropper" parent="." instance=ExtResource("5_dwbse")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6172, 3.7444, 5.00915)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6172, 3.7444, 4.94858)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(240, 240)
+size_2d_override_stretch = true
+render_target_update_mode = 4
 
-[node name="Camera3D" parent="CanvasLayer" instance=ExtResource("6_dwbse")]
-transform = Transform3D(0.0353856, -0.349014, 0.936449, 0.0131788, 0.937118, 0.348765, -0.999287, 0, 0.0377601, -28.3986, 3.10993, 5.25689)
+[node name="Camera3D" parent="SubViewport" instance=ExtResource("6_dwbse")]
+transform = Transform3D(0.0353856, -0.349014, 0.936449, 0.0131788, 0.937118, 0.348765, -0.999287, 1.95438e-08, 0.03776, -28.3986, 3.10993, 5.25689)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-0.0928719, 0, 0.951831, 0, 0.623368, 0, -0.696042, 0, -0.127001, -5.86153, 1.72736, 2.65054)
+texture = SubResource("ViewportTexture_pkg7o")

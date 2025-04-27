@@ -10,6 +10,7 @@
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 script = ExtResource("1_b5pni")
 rigidbody_scene = ExtResource("2_onh84")
+max_spawned = 14
 spawn_rate = 2.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://kjcrgxk2gfsx"]
+[gd_scene load_steps=9 format=4 uid="uid://kjcrgxk2gfsx"]
 
 [ext_resource type="Texture2D" uid="uid://cv03t6xkpdcvh" path="res://Models/bread_0.png" id="1_clnm7"]
 [ext_resource type="Script" uid="uid://c5hisn3b3xcxl" path="res://scrap.gd" id="1_fyse4"]
@@ -48,11 +48,13 @@ shadow_mesh = SubResource("ArrayMesh_dy052")
 radius = 0.22997
 height = 1.47379
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_clnm7"]
+
 [node name="Scrap" type="RigidBody3D"]
+process_physics_priority = 1
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 script = ExtResource("1_fyse4")
-lifetime = 29.0
 
 [node name="bread_Default OBJ_002_0" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0262823)
@@ -62,3 +64,9 @@ skeleton = NodePath("")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.0465873, 0.157823, 0)
 shape = SubResource("CapsuleShape3D_1c3sx")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0331521, 0.186508, 0)
+shape = SubResource("SphereShape3D_clnm7")
