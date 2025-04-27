@@ -18,6 +18,11 @@ background_mode = 2
 sky = SubResource("Sky_tlwt5")
 tonemap_mode = 2
 glow_enabled = true
+volumetric_fog_enabled = true
+adjustment_enabled = true
+adjustment_brightness = 1.25
+adjustment_contrast = 1.17
+adjustment_saturation = 1.08
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj7yv"]
 albedo_texture = ExtResource("1_f3sb7")
