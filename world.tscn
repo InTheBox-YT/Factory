@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://50f0tmfk3kso"]
+[gd_scene load_steps=13 format=3 uid="uid://50f0tmfk3kso"]
 
 [ext_resource type="Texture2D" uid="uid://1f037kqr6q4g" path="res://Materials/concrete.png" id="1_036b0"]
 [ext_resource type="PackedScene" uid="uid://dv1ngyts0h8eh" path="res://pick_up.tscn" id="2_dwbse"]
@@ -103,6 +103,12 @@ material = SubResource("StandardMaterial3D_fj7yv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4837, 3.62267, 4.9436)
 use_collision = true
 size = Vector3(24.9743, 0.952744, 2.05344)
+material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.336, 5.14374, 5.23697)
+use_collision = true
+size = Vector3(8.65568, 0.952744, 7.0324)
 material = SubResource("StandardMaterial3D_fj7yv")
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="."]
