@@ -8,6 +8,21 @@ const Sensitivity = 0.002
 
 @onready var Head = $Head
 @onready var Camera = $Head/Camera3D
+var pickedObject
+
+func pick_up_object(object):
+	object.reparent(self)
+	object.global_position = $CarryObjectMarker.global_position
+	
+	await get_tree().create_timer(0.1).timeout
+	pickedObject = object
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("quit"): get_tree().quit()
+	
+	if event.is_action_pressed("Interact") and pickedObject:
+		pickedObject.reparent(get_tree().current_scene)
+		pickedObject = null
 
 func _ready() -> void:
 	
