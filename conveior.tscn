@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://v43qjdo8k4r7"]
+
+[node name="Conveior" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.401917, 0)
+size = Vector3(1, 0.196167, 3)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48507, 0)
+size = Vector3(1.06836, 0.0351563, 3.10181)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.354645, 0.0886773, 1.29703)
+size = Vector3(0.210388, 0.681641, 0.238831)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.354645, 0.0886773, -1.29784)
+size = Vector3(0.210388, 0.681641, 0.238831)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.348783, 0.0886773, 1.29703)
+size = Vector3(0.210388, 0.681641, 0.238831)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.348783, 0.0886773, -1.29784)
+size = Vector3(0.210388, 0.681641, 0.238831)
