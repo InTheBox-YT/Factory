@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 
 func pick_up_object(object):
 	object.reparent(self)
-	object.global_position = $CarryObjectMarker.global_position
+	object.global_position = $Head/CarryObjectMarker.global_position
 	
 	await get_tree().create_timer(0.1).timeout
 	pickedObject = object
