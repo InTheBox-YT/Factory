@@ -1,14 +1,23 @@
 extends CharacterBody3D
 
+signal interact_object
+
+@onready var ray_cast_3d = $Head/Camera3D/RayCast3D
+@onready var Head = $Head
+@onready var Camera = $Head/Camera3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 const Sensitivity = 0.002
 
-
-@onready var Head = $Head
-@onready var Camera = $Head/Camera3D
 var pickedObject
+var collider
+
+func _process(delta: float) -> void:
+	if ray_cast_3d.is_colliding():
+		collider = ray_cast_3d.get_collider()
+		interact_object.emit(collider)
+	else: interact_object.emit(null)
 
 func pick_up_object(object):
 	object.reparent(self)
@@ -25,7 +34,7 @@ func _input(event: InputEvent) -> void:
 		pickedObject = null
 
 func _ready() -> void:
-	
+	add_to_group("player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 
@@ -57,6 +66,7 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	
 
 @onready var camera = $Head/Camera3D
 var camera_speed = 0.1
