@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://brniaxdciedoj"
-path="res://.godot/imported/bread.glb-847b5773c710b8ea46ee615292b48b0a.scn"
+path="res://.godot/imported/bread.glb-88cafb01bb2fe609a0250e8fb01dee20.scn"
 
 [deps]
 
-source_file="res://bread.glb"
-dest_files=["res://.godot/imported/bread.glb-847b5773c710b8ea46ee615292b48b0a.scn"]
+source_file="res://Models/bread.glb"
+dest_files=["res://.godot/imported/bread.glb-88cafb01bb2fe609a0250e8fb01dee20.scn"]
 
 [params]
 

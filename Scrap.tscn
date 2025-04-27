@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=4 uid="uid://kjcrgxk2gfsx"]
 
-[ext_resource type="Texture2D" uid="uid://cv03t6xkpdcvh" path="res://bread_0.png" id="1_clnm7"]
-[ext_resource type="Texture2D" uid="uid://b7fttcirwb4ab" path="res://bread_1.png" id="2_fyse4"]
-[ext_resource type="Texture2D" uid="uid://chch5wx08bivr" path="res://bread_2.png" id="3_8x125"]
+[ext_resource type="Texture2D" uid="uid://cv03t6xkpdcvh" path="res://Models/bread_0.png" id="1_clnm7"]
+[ext_resource type="Texture2D" uid="uid://b7fttcirwb4ab" path="res://Models/bread_1.png" id="2_fyse4"]
+[ext_resource type="Texture2D" uid="uid://chch5wx08bivr" path="res://Models/bread_2.png" id="3_8x125"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xn466"]
 size = Vector3(1, 0.644531, 2.33875)

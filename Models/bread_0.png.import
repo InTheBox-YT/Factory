@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7fttcirwb4ab"
-path.s3tc="res://.godot/imported/bread_1.png-f46cac45a4a2e1561e800da1cec0ccc7.s3tc.ctex"
+uid="uid://cv03t6xkpdcvh"
+path.s3tc="res://.godot/imported/bread_0.png-1f9d69f2e317a4f3ad4ce8af3731b546.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "1ff9e1c647d08dd8ac81439e75971ab9"
+"md5": "1a52f02370c34b627429c9e6327582ad"
 }
 
 [deps]
 
-source_file="res://bread_1.png"
-dest_files=["res://.godot/imported/bread_1.png-f46cac45a4a2e1561e800da1cec0ccc7.s3tc.ctex"]
+source_file="res://Models/bread_0.png"
+dest_files=["res://.godot/imported/bread_0.png-1f9d69f2e317a4f3ad4ce8af3731b546.s3tc.ctex"]
 
 [params]
 
@@ -27,8 +27,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=8
-roughness/src_normal="res://bread_2.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
