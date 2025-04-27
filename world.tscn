@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvp33gsjm7r4y"]
+[gd_scene load_steps=3 format=3 uid="uid://50f0tmfk3kso"]
 
-[ext_resource type="Texture2D" uid="uid://beqaq8mied7en" path="res://icon.svg" id="1_f3sb7"]
+[ext_resource type="Texture2D" path="res://icon.svg" id="1_f3sb7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj7yv"]
 albedo_texture = ExtResource("1_f3sb7")
@@ -16,6 +16,11 @@ material = SubResource("StandardMaterial3D_fj7yv")
 [node name="CSGBox3D7" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27.8097)
 size = Vector3(34.5957, 1, 22.9258)
+material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="CSGBox3D29" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14566, 0, -42.9088)
+size = Vector3(15.733, 1, 7.18665)
 material = SubResource("StandardMaterial3D_fj7yv")
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="."]
@@ -98,6 +103,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.1841, 1.79828, -28.199)
 size = Vector3(0.503418, 4.59656, 24.6123)
 material = SubResource("StandardMaterial3D_fj7yv")
 
+[node name="CSGBox3D30" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.46142, 1.79828, -43.1139)
+size = Vector3(0.503418, 4.59656, 6.96509)
+material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="CSGBox3D31" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.98635, 1.79828, -43.1139)
+size = Vector3(0.503418, 4.59656, 6.96509)
+material = SubResource("StandardMaterial3D_fj7yv")
+
 [node name="CSGBox3D3" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.52855, 1.79828, 0)
 size = Vector3(0.503418, 4.59656, 13)
@@ -121,6 +136,11 @@ material = SubResource("StandardMaterial3D_fj7yv")
 [node name="CSGBox3D28" type="CSGBox3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.1877, 1.79828, -39.8549)
 size = Vector3(0.503418, 4.59656, 15.2073)
+material = SubResource("StandardMaterial3D_fj7yv")
+
+[node name="CSGBox3D32" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.470222, 1.79828, -46.3679)
+size = Vector3(0.503418, 4.59656, 16.6852)
 material = SubResource("StandardMaterial3D_fj7yv")
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="."]
