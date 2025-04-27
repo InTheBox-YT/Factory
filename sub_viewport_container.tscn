@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnpofjqnmph6h"]
+[gd_scene load_steps=9 format=3 uid="uid://dnpofjqnmph6h"]
 
 [ext_resource type="Shader" uid="uid://8la2r6lcep5x" path="res://pixel.gdshader" id="1_rbxnt"]
 [ext_resource type="PackedScene" uid="uid://50f0tmfk3kso" path="res://world.tscn" id="2_gcxxy"]
+[ext_resource type="Shader" uid="uid://b538vfvai2d6v" path="res://cam.gdshader" id="3_gcxxy"]
 
 [sub_resource type="Gradient" id="Gradient_rbxnt"]
 offsets = PackedFloat32Array(1)
@@ -16,9 +17,31 @@ shader_parameter/change_color_depth = true
 shader_parameter/target_color_depth = 4
 shader_parameter/dithering = true
 shader_parameter/scale_resolution = true
-shader_parameter/target_resolution_scale = 5
+shader_parameter/target_resolution_scale = 4
 shader_parameter/enable_recolor = false
 shader_parameter/to_gradient = SubResource("GradientTexture2D_gcxxy")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wpm43"]
+shader = ExtResource("3_gcxxy")
+shader_parameter/color_bleed_enabled = true
+shader_parameter/chromatic_abberation_enabled = true
+shader_parameter/film_grain_enabled = true
+shader_parameter/sharpness_enabled = true
+shader_parameter/chromatic_abberation_seperation = 0.014
+shader_parameter/chromatic_abberation_intensity = 1.5
+shader_parameter/chromatic_abberation_blur_strength = 1.0
+shader_parameter/film_grain_intensity = 0.68
+shader_parameter/grain_size = 2.0
+shader_parameter/darkness_clamp = 0.02
+shader_parameter/sharpness_size = 2.0
+shader_parameter/sharpness_intensity = 0.7
+shader_parameter/color_bleed_seperation = 0.0
+shader_parameter/color_bleed_intensity = 0.0
+shader_parameter/anti_bleed_intensity = 3.0
+shader_parameter/color_bleed_blur_strength = 4.0
+shader_parameter/color_bleed_quality = 5
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_rwk7q"]
 
 [node name="SubViewportContainer" type="SubViewportContainer"]
 material = SubResource("ShaderMaterial_niex8")
@@ -45,3 +68,9 @@ top_level = true
 offset_right = 1925.0
 offset_bottom = 1088.0
 color = Color(1, 1, 0, 0.0509804)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport/CanvasLayer"]
+material = SubResource("ShaderMaterial_wpm43")
+offset_right = 1924.0
+offset_bottom = 1083.0
+texture = SubResource("CanvasTexture_rwk7q")
