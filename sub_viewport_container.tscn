@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dnpofjqnmph6h"]
 
-[ext_resource type="Shader" uid="uid://8la2r6lcep5x" path="res://pixel.gdshader" id="1_rbxnt"]
+[ext_resource type="Shader" path="res://pixel.gdshader" id="1_rbxnt"]
 [ext_resource type="PackedScene" uid="uid://50f0tmfk3kso" path="res://world.tscn" id="2_gcxxy"]
 
 [sub_resource type="Gradient" id="Gradient_rbxnt"]
