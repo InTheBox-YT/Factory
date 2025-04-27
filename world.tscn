@@ -233,51 +233,40 @@ transform = Transform3D(0.2745, -0.945038, -0.177632, 0.673267, 0.320779, -0.666
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.47844, 3.02416, -0.636436)
-shadow_enabled = true
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.47844, 3.02416, 4.20549)
-shadow_enabled = true
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59821, 3.02416, -0.636436)
-shadow_enabled = true
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59821, 3.02416, 4.20549)
-shadow_enabled = true
 
 [node name="OmniLight3D9" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.36225, 2.17283, 4.90486)
 light_color = Color(0.572669, 1.1792e-06, 3.36915e-07, 1)
-shadow_enabled = true
 
 [node name="OmniLight3D11" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2905, 2.17283, 4.90486)
 light_color = Color(0.572669, 1.1792e-06, 3.36915e-07, 1)
-shadow_enabled = true
 omni_range = 11.3351
 
 [node name="OmniLight3D10" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.63568, 2.17283, 4.90486)
 light_color = Color(0.572669, 1.1792e-06, 3.36915e-07, 1)
-shadow_enabled = true
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.47844, 3.02416, -9.0675)
-shadow_enabled = true
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.47844, 3.02416, -4.22558)
-shadow_enabled = true
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59821, 3.02416, -9.0675)
-shadow_enabled = true
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59821, 3.02416, -4.22558)
-shadow_enabled = true
 
 [node name="Dropper" parent="." instance=ExtResource("5_dwbse")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6172, 3.7444, 5.00915)
