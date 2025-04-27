@@ -16,7 +16,7 @@ shader_parameter/change_color_depth = true
 shader_parameter/target_color_depth = 4
 shader_parameter/dithering = true
 shader_parameter/scale_resolution = true
-shader_parameter/target_resolution_scale = 4
+shader_parameter/target_resolution_scale = 5
 shader_parameter/enable_recolor = false
 shader_parameter/to_gradient = SubResource("GradientTexture2D_gcxxy")
 
@@ -37,3 +37,11 @@ size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="World" parent="SubViewport" instance=ExtResource("2_gcxxy")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SubViewport"]
+
+[node name="ColorRect" type="ColorRect" parent="SubViewport/CanvasLayer"]
+top_level = true
+offset_right = 1925.0
+offset_bottom = 1088.0
+color = Color(1, 1, 0, 0.0509804)

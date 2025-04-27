@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dt4e0p4tn3nmk" path="res://player.gd" id="1_02mut"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_djy0i"]
+height = 1.553
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_l08ks"]
 
@@ -10,10 +11,13 @@
 script = ExtResource("1_02mut")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.825563, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_djy0i")
 debug_color = Color(0, 0.639105, 0.369398, 0.42)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.825563, 0, 0, 0, 1, 0, 0, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_l08ks")
 skeleton = NodePath("../CollisionShape3D")
 

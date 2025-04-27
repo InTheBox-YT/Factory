@@ -13,3 +13,7 @@ func _physics_process(delta: float) -> void:
 			if body is RigidBody3D:
 				body.linear_velocity.x = lerp(body.linear_velocity.x, target_velocity.x, 5.0 * delta)
 				body.linear_velocity.z = lerp(body.linear_velocity.z, target_velocity.z, 5.0 * delta)
+			
+			elif body is CharacterBody3D:
+				body.velocity.x = lerp(body.velocity.x, target_velocity.x, 5.0 * delta)
+				body.velocity.z = lerp(body.velocity.z, target_velocity.z, 5.0 * delta)
