@@ -4,8 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dv1ngyts0h8eh" path="res://pick_up.tscn" id="2_dwbse"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://bjul10h6aoivw" path="res://conveior.tscn" id="3_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://kjcrgxk2gfsx" path="res://Scrap.tscn" id="4_aqk2v"]
 [ext_resource type="PackedScene" uid="uid://sa7o45um307m" path="res://Scenes/big.tscn" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://c6dr6fhorshkg" path="res://dropper.tscn" id="5_dwbse"]
+[ext_resource type="PackedScene" uid="uid://d2y2jer4h4wp6" path="res://Materials/camera_3d.tscn" id="6_dwbse"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -134,6 +135,12 @@ use_collision = true
 size = Vector3(0.503418, 4.59656, 65.2023)
 material = SubResource("StandardMaterial3D_fj7yv")
 
+[node name="CSGBox3D24" type="CSGBox3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.747, 2.11492, 4.9642)
+use_collision = true
+size = Vector3(3.01978, 4.02478, 1.04205)
+material = SubResource("StandardMaterial3D_fj7yv")
+
 [node name="CSGBox3D9" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9755, 1.79828, -28.199)
 use_collision = true
@@ -215,21 +222,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0228705, 3.00659, -1.07007
 [node name="Conveior" parent="." instance=ExtResource("3_tlwt5")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0858346, 0.695763, 4.9941)
 
-[node name="Scrap" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(0.533526, 0, 0.845784, 0, 1, 0, -0.845784, 0, 0.533526, -17.5198, 1.6388, 4.95126)
-
-[node name="Scrap2" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(0.533526, 0, 0.845784, 0, 1, 0, -0.845784, 0, 0.533526, -16.39, 1.6388, 4.95126)
-
-[node name="Scrap3" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(0.533526, 0, 0.845784, 0, 1, 0, -0.845784, 0, 0.533526, -15.4023, 1.6388, 4.95126)
-
-[node name="Scrap4" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(0.533526, 0, 0.845784, 0, 1, 0, -0.845784, 0, 0.533526, -14.1503, 1.6388, 4.95126)
-
-[node name="Scrap5" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(0.533526, 0, 0.845784, 0, 1, 0, -0.845784, 0, 0.533526, -12.9373, 1.6388, 4.95126)
-
 [node name="StaticBody3D" parent="." instance=ExtResource("5_036b0")]
 transform = Transform3D(0.2745, -0.945038, -0.177632, 0.673267, 0.320779, -0.666192, 0.686557, 0.0632761, 0.724317, -3.14323, 1.8528, -3.34731)
 
@@ -254,6 +246,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.36225, 2.17283, 4.90486)
 light_color = Color(0.572669, 1.1792e-06, 3.36915e-07, 1)
 shadow_enabled = true
 
+[node name="OmniLight3D11" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.2905, 2.17283, 4.90486)
+light_color = Color(0.572669, 1.1792e-06, 3.36915e-07, 1)
+shadow_enabled = true
+omni_range = 11.3351
+
 [node name="OmniLight3D10" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.63568, 2.17283, 4.90486)
 light_color = Color(0.572669, 1.1792e-06, 3.36915e-07, 1)
@@ -274,3 +272,11 @@ shadow_enabled = true
 [node name="OmniLight3D8" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59821, 3.02416, -4.22558)
 shadow_enabled = true
+
+[node name="Dropper" parent="." instance=ExtResource("5_dwbse")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6172, 3.7444, 5.00915)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Camera3D" parent="CanvasLayer" instance=ExtResource("6_dwbse")]
+transform = Transform3D(0.0353856, -0.349014, 0.936449, 0.0131788, 0.937118, 0.348765, -0.999287, 0, 0.0377601, -28.3986, 3.10993, 5.25689)
