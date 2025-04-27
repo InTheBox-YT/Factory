@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://beqaq8mied7en" path="res://icon.svg" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_fj7yv"]
-[ext_resource type="PackedScene" uid="uid://5fcu306mnktn" path="res://conveior.tscn" id="3_tlwt5"]
-[ext_resource type="PackedScene" path="res://Scrap.tscn" id="4_aqk2v"]
+[ext_resource type="PackedScene" uid="uid://bjul10h6aoivw" path="res://conveior.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://kjcrgxk2gfsx" path="res://Scrap.tscn" id="4_aqk2v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -214,6 +214,15 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.0278
 [node name="Conveior9" parent="." instance=ExtResource("3_tlwt5")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.02782, 0.695763, 0.716594)
 
+[node name="Conveior10" parent="." instance=ExtResource("3_tlwt5")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.02782, 0.695763, 18.3036)
+
+[node name="Conveior11" parent="." instance=ExtResource("3_tlwt5")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.02782, 0.695763, 14.7921)
+
+[node name="Conveior12" parent="." instance=ExtResource("3_tlwt5")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.02782, 0.695763, 11.278)
+
 [node name="Conveior2" parent="." instance=ExtResource("3_tlwt5")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.9832, 0.695763, -1.74572)
 
@@ -224,4 +233,4 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15.50
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.0474, 0.695763, -1.74572)
 
 [node name="Scrap" parent="." instance=ExtResource("4_aqk2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.6548, 2.10603, -1.70298)
+transform = Transform3D(0.580035, 0, 0.814592, 0, 1, 0, -0.814592, 0, 0.580035, -19.6548, 2.10603, -1.70298)

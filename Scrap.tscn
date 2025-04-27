@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://chch5wx08bivr" path="res://bread_2.png" id="3_8x125"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xn466"]
+size = Vector3(1, 0.644531, 2.33875)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dp1vi"]
 resource_name = "Default_OBJ.002"
@@ -54,12 +55,14 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dy052")
 
 [node name="Scrap" type="RigidBody3D"]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.193366, 0.0700378)
 shape = SubResource("BoxShape3D_xn466")
 
 [node name="bread_Default OBJ_002_0" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.0262823)
 mesh = SubResource("ArrayMesh_2j22f")
 skeleton = NodePath("")
