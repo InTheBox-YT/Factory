@@ -11,8 +11,10 @@ script = ExtResource("1_02mut")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_djy0i")
+debug_color = Color(0, 0.639105, 0.369398, 0.42)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_l08ks")
 skeleton = NodePath("../CollisionShape3D")
 
@@ -20,3 +22,5 @@ skeleton = NodePath("../CollisionShape3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.694281, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Head/Camera3D"]

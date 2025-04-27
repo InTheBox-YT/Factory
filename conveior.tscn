@@ -1,11 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bjul10h6aoivw"]
 
 [ext_resource type="Script" uid="uid://cvqs5t7aeyu4h" path="res://Convior.gd" id="1_17fd5"]
+[ext_resource type="Material" uid="uid://bswswcs1gqfbu" path="res://Materials/conveior.tres" id="2_xcxso"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_xcxso"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x0177"]
-albedo_color = Color(0.52549, 1, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4vdxm"]
 size = Vector3(1, 0.115112, 3.54541)
@@ -16,12 +14,14 @@ size = Vector3(1, 0.0600586, 3.54492)
 [node name="Conveior" type="Node3D"]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 18.126, 0, 0, 0)
 script = ExtResource("1_17fd5")
+belt_speed = 0.2
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1.48154, 0, 0, 0, 0.102559, 0, 0, 0, 3.5455, 0, 0.549771, 0.0133911)
 mesh = SubResource("BoxMesh_xcxso")
-surface_material_override/0 = SubResource("StandardMaterial3D_x0177")
+surface_material_override/0 = ExtResource("2_xcxso")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1.48154, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.545565, 0.0134273)
@@ -33,10 +33,52 @@ shape = SubResource("BoxShape3D_4vdxm")
 transform = Transform3D(1.47576, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.617542, 0.0141603)
 shape = SubResource("BoxShape3D_e6r1j")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.711549, 0.574894, 0.0134435)
 size = Vector3(0.107422, 0.187317, 3.54581)
+material = ExtResource("2_xcxso")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+[node name="CSGBox3D2" type="CSGBox3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.727783, 0.574894, 0.0136876)
 size = Vector3(0.107422, 0.187317, 3.5463)
+material = ExtResource("2_xcxso")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.574176, 0.260392, 1.4459)
+size = Vector3(0.171692, 0.478043, 0.171955)
+material = ExtResource("2_xcxso")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58882, 0.260392, 1.4459)
+size = Vector3(0.171692, 0.478043, 0.171955)
+material = ExtResource("2_xcxso")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.574176, 0.260392, -1.40044)
+size = Vector3(0.171692, 0.478043, 0.171955)
+material = ExtResource("2_xcxso")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58882, 0.260392, -1.40044)
+size = Vector3(0.171692, 0.478043, 0.171955)
+material = ExtResource("2_xcxso")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.574176, -0.201587, 1.4459)
+size = Vector3(0.171692, 0.478043, 0.171955)
+material = ExtResource("2_xcxso")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58882, -0.201587, 1.4459)
+size = Vector3(0.171692, 0.478043, 0.171955)
+material = ExtResource("2_xcxso")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.574176, -0.201587, -1.40044)
+size = Vector3(0.171692, 0.478043, 0.171955)
+material = ExtResource("2_xcxso")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.58882, -0.201587, -1.40044)
+size = Vector3(0.171692, 0.478043, 0.171955)
+material = ExtResource("2_xcxso")
