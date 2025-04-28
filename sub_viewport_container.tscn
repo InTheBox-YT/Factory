@@ -27,12 +27,12 @@ shader_parameter/color_bleed_enabled = true
 shader_parameter/chromatic_abberation_enabled = true
 shader_parameter/film_grain_enabled = true
 shader_parameter/sharpness_enabled = true
-shader_parameter/chromatic_abberation_seperation = 0.014
+shader_parameter/chromatic_abberation_seperation = 0.021
 shader_parameter/chromatic_abberation_intensity = 1.5
 shader_parameter/chromatic_abberation_blur_strength = 1.0
-shader_parameter/film_grain_intensity = 0.68
+shader_parameter/film_grain_intensity = 0.46
 shader_parameter/grain_size = 2.0
-shader_parameter/darkness_clamp = 0.02
+shader_parameter/darkness_clamp = 0.25
 shader_parameter/sharpness_size = 2.0
 shader_parameter/sharpness_intensity = 0.7
 shader_parameter/color_bleed_seperation = 0.0
@@ -63,13 +63,13 @@ render_target_update_mode = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="SubViewport"]
 
-[node name="ColorRect" type="ColorRect" parent="SubViewport/CanvasLayer"]
+[node name="Piss Filter" type="ColorRect" parent="SubViewport/CanvasLayer"]
 top_level = true
 offset_right = 1925.0
 offset_bottom = 1088.0
 color = Color(1, 1, 0, 0.0509804)
 
-[node name="TextureRect" type="TextureRect" parent="SubViewport/CanvasLayer"]
+[node name="Camrea Effects" type="TextureRect" parent="SubViewport/CanvasLayer"]
 material = SubResource("ShaderMaterial_wpm43")
 offset_right = 1924.0
 offset_bottom = 1083.0

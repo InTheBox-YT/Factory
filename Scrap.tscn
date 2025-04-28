@@ -52,6 +52,7 @@ height = 1.29984
 
 [node name="Scrap" type="RigidBody3D"]
 process_physics_priority = 1
+collision_layer = 3
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 mass = 0.4

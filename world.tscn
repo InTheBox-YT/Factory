@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://50f0tmfk3kso"]
+[gd_scene load_steps=19 format=3 uid="uid://50f0tmfk3kso"]
 
 [ext_resource type="Texture2D" uid="uid://1f037kqr6q4g" path="res://Materials/concrete.png" id="1_036b0"]
 [ext_resource type="PackedScene" uid="uid://dv1ngyts0h8eh" path="res://pick_up.tscn" id="2_dwbse"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://d2y2jer4h4wp6" path="res://Materials/camera_3d.tscn" id="6_dwbse"]
 [ext_resource type="Material" uid="uid://d1rwv737cvubm" path="res://Materials/blackconc.tres" id="7_gbfbk"]
 [ext_resource type="Texture2D" uid="uid://bum2lxqgpkglr" path="res://Materials/istockphoto-1639475440-612x3.png" id="9_ioo17"]
+[ext_resource type="Texture2D" uid="uid://det2rqpj1hso" path="res://Materials/istockphoto-1639475440-612x612.png" id="10_wse8f"]
+[ext_resource type="PackedScene" uid="uid://c0loao6mlddsl" path="res://r_ails.tscn" id="11_k3n1d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -93,6 +95,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.085
 transform = Transform3D(0.2745, -0.945038, -0.177632, 0.673267, 0.320779, -0.666192, 0.686557, 0.0632761, 0.724317, -3.14323, 1.8528, -29.7085)
 
 [node name="SubViewport" type="SubViewport" parent="."]
+canvas_item_default_texture_filter = 0
 size = Vector2i(240, 240)
 size_2d_override_stretch = true
 render_target_update_mode = 4
@@ -137,15 +140,15 @@ size = Vector3(0.503418, 4.59656, 11.0955)
 material = SubResource("StandardMaterial3D_fj7yv")
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Map"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.63657, 1.79828, -10.9595)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.7104, 1.79828, -10.9595)
 use_collision = true
-size = Vector3(11.0623, 4.59656, 4.68701)
+size = Vector3(11.0623, 4.59656, 20.8347)
 material = SubResource("StandardMaterial3D_fj7yv")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Map"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.35983, 1.79828, -10.9595)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.398, 1.79828, -10.9595)
 use_collision = true
-size = Vector3(11.0623, 4.59656, 4.68701)
+size = Vector3(11.0623, 4.59656, 18.7634)
 material = SubResource("StandardMaterial3D_fj7yv")
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="Map"]
@@ -376,6 +379,24 @@ use_collision = true
 size = Vector3(13.2394, 0.344875, 0.473989)
 material = ExtResource("7_gbfbk")
 
+[node name="CSGBox3D51" type="CSGBox3D" parent="Map"]
+transform = Transform3D(-1, 0, 0.000994833, 0, 1, 0, -0.000994833, 0, -1, 2.42086, 2.26653, -16.6664)
+use_collision = true
+size = Vector3(0.718162, 3.90129, 0.680445)
+material = ExtResource("7_gbfbk")
+
+[node name="CSGBox3D52" type="CSGBox3D" parent="Map"]
+transform = Transform3D(-1, 0, 0.000994833, 0, 1, 0, -0.000994833, 0, -1, -2.27796, 2.26653, -16.6711)
+use_collision = true
+size = Vector3(0.718162, 3.90129, 0.680445)
+material = ExtResource("7_gbfbk")
+
+[node name="CSGBox3D53" type="CSGBox3D" parent="Map"]
+transform = Transform3D(-1, 0, 0.000994833, 0, 1, 0, -0.000994833, 0, -1, -2.89063, 4.01575, -16.5269)
+use_collision = true
+size = Vector3(43.0099, 0.344875, 0.473989)
+material = ExtResource("7_gbfbk")
+
 [node name="CSGBox3D46" type="CSGBox3D" parent="Map"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0210905, 4.01575, 6.04234)
 use_collision = true
@@ -499,11 +520,19 @@ shaded = true
 texture = ExtResource("9_ioo17")
 
 [node name="Sprite3D4" type="Sprite3D" parent="."]
-transform = Transform3D(-0.5, 0, 7.54979e-08, 0, 0.5, 0, -7.54979e-08, 0, -0.5, 0.0383068, 2.03593, 5.94621)
+transform = Transform3D(-0.499506, -0.0222282, 7.54233e-08, -0.0222282, 0.499506, 3.35636e-09, -7.54979e-08, 0, -0.5, 0.0383068, 2.03593, 5.94621)
 shaded = true
 texture = ExtResource("9_ioo17")
+
+[node name="Sprite3D5" type="Sprite3D" parent="."]
+transform = Transform3D(-0.335481, 0.0997626, 5.06562e-08, 0.0997626, 0.335481, -1.50637e-08, -5.28485e-08, 0, -0.35, -4.853, 2.88598, 5.94621)
+shaded = true
+texture = ExtResource("10_wse8f")
 
 [node name="Sprite3D3" type="Sprite3D" parent="."]
 transform = Transform3D(-0.5, 0, 7.54979e-08, 0, 0.5, 0, -7.54979e-08, 0, -0.5, 7.56407, 2.03593, 5.94621)
 shaded = true
 texture = ExtResource("9_ioo17")
+
+[node name="rAILS" parent="." instance=ExtResource("11_k3n1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.624678, 0.641137, -27.3753)

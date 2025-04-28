@@ -5,4 +5,5 @@
 [resource]
 albedo_color = Color(0.687215, 0.687215, 0.687215, 1)
 albedo_texture = ExtResource("1_5g7ij")
+uv1_scale = Vector3(0.53, 5.906, 3.786)
 uv1_triplanar = true
