@@ -6,13 +6,17 @@ signal interact_object
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var interaction: RayCast3D = $Head/Camera3D/interaction
 @onready var hand: Node3D = $Head/Camera3D/hand
+@onready var joint = $Head/Camera3D/Generic6DOFJoint3D
+@onready var staticbody = $Head/Camera3D/StaticBody3D
 
 const SPEED := 3.5
 const JUMP_VELOCITY := 2.7
 const SENSITIVITY := 0.002
 
 var picked_object: Node3D = null
-var pull_power = 4
+var pull_power = 8
+var rotation_power = 0.04
+var locked = false
 
 func pick_object():
 	var collider = interaction.get_collider()
