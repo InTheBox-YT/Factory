@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://kjcrgxk2gfsx"]
+[gd_scene load_steps=7 format=3 uid="uid://kjcrgxk2gfsx"]
 
 [ext_resource type="Script" uid="uid://c5hisn3b3xcxl" path="res://scrap.gd" id="1_fyse4"]
 [ext_resource type="ArrayMesh" uid="uid://dlcjtho5bjqml" path="res://Models/scraptemp.obj" id="2_clnm7"]
@@ -10,11 +10,12 @@ size = Vector3(2.21926, 2.51607, 0.466972)
 [sub_resource type="BoxShape3D" id="BoxShape3D_clnm7"]
 size = Vector3(1, 0.396606, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fyse4"]
+size = Vector3(0.529053, 0.135193, 0.426392)
+
 [node name="Scrap" type="RigidBody3D"]
 process_physics_priority = 1
 collision_layer = 3
-axis_lock_angular_x = true
-axis_lock_angular_z = true
 mass = 0.4
 script = ExtResource("1_fyse4")
 
@@ -43,3 +44,7 @@ surface_material_override/8 = ExtResource("3_fyse4")
 surface_material_override/9 = ExtResource("3_fyse4")
 surface_material_override/10 = ExtResource("3_fyse4")
 surface_material_override/11 = ExtResource("3_fyse4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0423584, 0.213226, 0.194153)
+shape = SubResource("BoxShape3D_fyse4")

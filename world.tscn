@@ -94,7 +94,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0228705, 2.02619, -1.07007
 [node name="Conveior" parent="." instance=ExtResource("3_tlwt5")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0858346, 0.695763, 4.9941)
 
-[node name="StaticBody3D" parent="." instance=ExtResource("5_036b0")]
+[node name="BiggestBoss" parent="." instance=ExtResource("5_036b0")]
 transform = Transform3D(0.2745, -0.945038, -0.177632, 0.673267, 0.320779, -0.666192, 0.686557, 0.0632761, 0.724317, -3.14323, 1.8528, -29.7085)
 
 [node name="SubViewport" type="SubViewport" parent="."]
@@ -358,6 +358,24 @@ use_collision = true
 size = Vector3(0.488814, 0.344875, 2.11319)
 material = ExtResource("7_gbfbk")
 
+[node name="CSGBox3D44" type="CSGBox3D" parent="Map"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -30.7601, 3.2865, 4.99308)
+use_collision = true
+size = Vector3(0.435192, 0.344875, 2.11319)
+material = ExtResource("7_gbfbk")
+
+[node name="CSGBox3D61" type="CSGBox3D" parent="Map"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -32.2444, 3.56527, 4.99308)
+use_collision = true
+size = Vector3(0.373846, 0.902418, 2.11319)
+material = ExtResource("7_gbfbk")
+
+[node name="CSGBox3D62" type="CSGBox3D" parent="Map"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -32.2137, 1.36425, 4.96913)
+use_collision = true
+size = Vector3(0.435192, 0.902418, 2.16109)
+material = ExtResource("7_gbfbk")
+
 [node name="CSGBox3D42" type="CSGBox3D" parent="Map"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.14378, 4.01575, 0.158497)
 use_collision = true
@@ -555,7 +573,7 @@ shadow_enabled = true
 omni_range = 4096.0
 
 [node name="Dropper" parent="WhiteLight" instance=ExtResource("5_dwbse")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.6172, 3.7444, 4.94858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5619, 3.7444, 4.94858)
 
 [node name="RedLight" type="Node" parent="."]
 
@@ -605,6 +623,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.624678, 0.641137, -27.3753
 
 [node name="Doorbycoolant" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.285, 0, 0, 0, 0.285, 0, 0, 0, 0.285, -3.96971, 1.66402, -5.44476)
+mesh = ExtResource("15_2u3nc")
+surface_material_override/0 = ExtResource("7_gbfbk")
+surface_material_override/1 = ExtResource("16_udxuc")
+surface_material_override/2 = ExtResource("13_2o6r5")
+
+[node name="Doorbycoolant3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.285, 0, 0, 0, 0.285, 0, 0, 0, 0.285, 18.2337, 1.66402, -5.44476)
 mesh = ExtResource("15_2u3nc")
 surface_material_override/0 = ExtResource("7_gbfbk")
 surface_material_override/1 = ExtResource("16_udxuc")
