@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://ou06fc2kqk0a"]
+[gd_scene load_steps=4 format=3 uid="uid://ou06fc2kqk0a"]
 
 [ext_resource type="Script" uid="uid://dt4e0p4tn3nmk" path="res://player.gd" id="1_02mut"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_djy0i"]
 height = 1.57502
+
+[sub_resource type="SphereMesh" id="SphereMesh_rpqav"]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_02mut")
@@ -23,3 +25,23 @@ target_position = Vector3(0, 5, 0)
 
 [node name="hand" type="Marker3D" parent="Head/Camera3D"]
 transform = Transform3D(-0.121796, -0.00877533, -0.992516, -0.071863, 0.997415, 0, 0.98995, 0.0713252, -0.122112, 0.0309539, 0.00840026, -1.86043)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer/CenterContainer"]
+position = Vector2(20, 20)
+scale = Vector2(4.25454, 4.25454)
+mesh = SubResource("SphereMesh_rpqav")

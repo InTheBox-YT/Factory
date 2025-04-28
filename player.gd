@@ -21,7 +21,10 @@ func pick_object():
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("lclick"):
-		pick_object()
+		if picked_object == null:
+			pick_object()
+		elif picked_object != null:
+			remove_object()
 
 func _ready() -> void:
 	add_to_group("player")
@@ -62,6 +65,10 @@ func handle_mouse_look(event: InputEventMouseMotion) -> void:
 	head.rotate_y(-event.relative.x * SENSITIVITY)
 	camera.rotate_x(-event.relative.y * SENSITIVITY)
 	camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-90), deg_to_rad(60))
+
+func remove_object():
+	if picked_object != null:
+		picked_object = null
 
 func _physics_process(delta: float) -> void:
 	handle_gravity(delta)
