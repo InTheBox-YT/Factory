@@ -7,8 +7,8 @@ signal interact_object
 @onready var ray_cast: RayCast3D = $Head/Camera3D/RayCast3D
 @onready var carry_marker: Node3D = $Head/Camera3D/CarryObjectMarker
 
-const SPEED := 5.0
-const JUMP_VELOCITY := 4.5
+const SPEED := 3.5
+const JUMP_VELOCITY := 2.7
 const SENSITIVITY := 0.002
 
 var picked_object: Node3D = null
