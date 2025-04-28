@@ -22,6 +22,13 @@ func pick_object():
 	var collider = interaction.get_collider()
 	if collider != null and collider is RigidBody3D:
 		picked_object = collider
+		joint.set_node_b(picked_object.get_path())
+
+func rotate_object(event):
+	if picked_object != null:
+		if event is InputEventMouseMotion:
+			staticbody.rotate_x(deg_to_rad(event.relative.y * rotation_power))
+			staticbody.rotate_y(deg_to_rad(event.relative.x * rotation_power))
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("lclick"):
@@ -73,6 +80,7 @@ func handle_mouse_look(event: InputEventMouseMotion) -> void:
 func remove_object():
 	if picked_object != null:
 		picked_object = null
+		joint.set_node_b(joint.get_path())
 
 func _physics_process(delta: float) -> void:
 	handle_gravity(delta)
