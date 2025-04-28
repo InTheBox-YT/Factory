@@ -17,7 +17,7 @@ var pull_power = 4
 func pick_object():
 	var collider = interaction.get_collider()
 	if collider != null and collider is RigidBody3D:
-		print("YES WE CONNECT!!!")
+		picked_object = collider
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("lclick"):
@@ -38,11 +38,11 @@ func update_interact_ray() -> void:
 	#interact_object.emit(collider)
 	pass
 
-func pick_up_object(object: Node3D) -> void:
-	object.reparent(self)
-	object.global_position = hand.global_position
-	await get_tree().create_timer(0.1).timeout
-	picked_object = object
+#func pick_up_object(object: Node3D) -> void:
+	#object.reparent(self)
+	#object.global_position = hand.global_position
+	#await get_tree().create_timer(0.1).timeout
+	#picked_object = object
 
 #func _input(event: InputEvent) -> void:
 	#if event.is_action_pressed("quit"):
@@ -66,6 +66,11 @@ func handle_mouse_look(event: InputEventMouseMotion) -> void:
 func _physics_process(delta: float) -> void:
 	handle_gravity(delta)
 	handle_movement(delta)
+	
+	if picked_object != null:
+		var a = picked_object.global_transform.origin
+		var b = hand.global_transform.origin
+		picked_object.set_linear_velocity((b-a)*pull_power)
 
 func handle_gravity(delta: float) -> void:
 	if not is_on_floor():
