@@ -7,8 +7,8 @@ signal interact_object
 @onready var interaction: RayCast3D = $Head/Camera3D/interaction
 @onready var hand: Node3D = $Head/Camera3D/hand
 
-const SPEED := 5.0
-const JUMP_VELOCITY := 4.5
+const SPEED := 3.5
+const JUMP_VELOCITY := 2.7
 const SENSITIVITY := 0.002
 
 var picked_object: Node3D = null
