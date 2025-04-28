@@ -4,8 +4,8 @@ signal interact_object
 
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
-@onready var ray_cast: RayCast3D = $Head/Camera3D/RayCast3D
-@onready var carry_marker: Node3D = $Head/Camera3D/CarryObjectMarker
+@onready var interaction: RayCast3D = $Head/Camera3D/interaction
+@onready var hand: Node3D = $Head/Camera3D/hand
 
 const SPEED := 5.0
 const JUMP_VELOCITY := 4.5
