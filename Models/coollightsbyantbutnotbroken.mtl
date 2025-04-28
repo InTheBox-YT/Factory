@@ -1,0 +1,46 @@
+newmtl Union1Mtl
+Material Color
+Ka 0.042987 0.042987 0.042987
+Kd 0.042987 0.042987 0.042987
+Ks 0.028658 0.028658 0.028658 
+
+d 1
+
+Ns 255
+
+map_Ka Union1_diff.png
+map_Kd Union1_diff.png
+map_d Union1_diff.png
+
+map_Bump Union1_nmap.png
+
+map_Ns Union1_spec.png
+
+newmtl Union2Mtl
+Material Color
+Ka 0.819964 0.708298 0.708298
+Kd 0.819964 0.708298 0.708298
+Ks 0.0739575 0.0638857 0.0638857 
+
+d 1
+
+Ns 0
+
+newmtl NeonFrame1Mtl
+Material Color
+Ka 0.729919 0.729919 0.729919
+Kd 0.729919 0.729919 0.729919
+Ks 0.486613 0.486613 0.486613 
+
+d 1
+
+Ns 255
+
+map_Ka Union1_diff.png
+map_Kd Union1_diff.png
+map_d Union1_diff.png
+
+map_Bump Union1_nmap.png
+
+map_Ns Union1_spec.png
+

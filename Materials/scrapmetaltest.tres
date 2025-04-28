@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://d0ilj32wi5p6d"]
+
+[ext_resource type="Texture2D" uid="uid://bbnapw6aacd62" path="res://Models/Scrapyard0105_1_350.jpg" id="1_u0gkg"]
+
+[resource]
+albedo_texture = ExtResource("1_u0gkg")
+uv1_scale = Vector3(0.045, 0.045, 0.045)
+uv1_triplanar = true
