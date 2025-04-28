@@ -12,7 +12,16 @@ const JUMP_VELOCITY := 2.7
 const SENSITIVITY := 0.002
 
 var picked_object: Node3D = null
-var collider: Object = null
+var pull_power = 4
+
+func pick_object():
+	var collider = interaction.get_collider()
+	if collider != null and collider is RigidBody3D:
+		print("YES WE CONNECT!!!")
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("lclick"):
+		pick_object()
 
 func _ready() -> void:
 	add_to_group("player")
@@ -22,12 +31,12 @@ func _process(delta: float) -> void:
 	update_interact_ray()
 
 func update_interact_ray() -> void:
-	if interaction.is_colliding():
-		collider = interaction.get_collider()
-	else:
-		collider = null
-	interact_object.emit(collider)
+#	if interaction.is_colliding():
 	
+	#else:
+	#	collider = null
+	#interact_object.emit(collider)
+	pass
 
 func pick_up_object(object: Node3D) -> void:
 	object.reparent(self)
@@ -35,11 +44,11 @@ func pick_up_object(object: Node3D) -> void:
 	await get_tree().create_timer(0.1).timeout
 	picked_object = object
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("quit"):
-		get_tree().quit()
-	elif event.is_action_pressed("Interact") and picked_object:
-		drop_object()
+#func _input(event: InputEvent) -> void:
+	#if event.is_action_pressed("quit"):
+		#get_tree().quit()
+	#elif event.is_action_pressed("Interact") and picked_object:
+		#drop_object()
 
 func drop_object() -> void:
 	picked_object.reparent(get_tree().current_scene)

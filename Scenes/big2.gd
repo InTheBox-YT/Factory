@@ -1,1 +1,1 @@
-extends CharacterBody3D
+extends RigidBody3D
