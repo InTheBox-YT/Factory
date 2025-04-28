@@ -22,15 +22,16 @@ func _process(delta: float) -> void:
 	update_interact_ray()
 
 func update_interact_ray() -> void:
-	if ray_cast.is_colliding():
-		collider = ray_cast.get_collider()
+	if interaction.is_colliding():
+		collider = interaction.get_collider()
 	else:
 		collider = null
 	interact_object.emit(collider)
+	
 
 func pick_up_object(object: Node3D) -> void:
 	object.reparent(self)
-	object.global_position = carry_marker.global_position
+	object.global_position = hand.global_position
 	await get_tree().create_timer(0.1).timeout
 	picked_object = object
 
