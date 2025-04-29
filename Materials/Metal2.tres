@@ -6,7 +6,6 @@
 [resource]
 diffuse_mode = 1
 albedo_texture = ExtResource("1_x4rx5")
-normal_enabled = true
 normal_scale = -0.77
 normal_texture = ExtResource("2_6v2ps")
 uv1_scale = Vector3(1.17, 1.17, 1.17)
