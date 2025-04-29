@@ -32,21 +32,9 @@ var tilt_target = 0.0
 var tilt_current = 0.0
 var moving_camera = false
 
-func pick_object():
-	var collider = interaction.get_collider()
-	if collider != null and collider is RigidBody3D:
-		picked_object = collider
-
 func _ready() -> void:
 	add_to_group("player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("lclick"):
-		if picked_object == null:
-			pick_object()
-		else:
-			remove_object()
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -121,8 +109,34 @@ func handle_movement(delta: float) -> void:
 func remove_object():
 	if picked_object != null:
 		picked_object = null
+		joint.set_node_b(joint.get_path())
 
 func drop_object() -> void:
 	if picked_object:
 		picked_object.reparent(get_tree().current_scene)
 		picked_object = null
+
+func rotate_object(event):
+	if picked_object != null:
+		if event is InputEventMouseMotion:
+			staticbody.rotate_x(deg_to_rad(event.relative.y * rotation_power))
+			staticbody.rotate_y(deg_to_rad(event.relative.x * rotation_power))
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("lclick"):
+		if picked_object == null:
+			pick_object()
+		else:
+			remove_object()
+	
+	if Input.is_action_pressed("rclick"):
+		locked = true
+		rotate_object(event)
+	if Input.is_action_just_released("rclick"):
+		locked = false
+
+func pick_object():
+	var collider = interaction.get_collider()
+	if collider != null and collider is RigidBody3D:
+		picked_object = collider
+		joint.set_node_b(picked_object.get_path())
