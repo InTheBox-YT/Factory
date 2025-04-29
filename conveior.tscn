@@ -35,11 +35,13 @@ shape = SubResource("BoxShape3D_e6r1j")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.711549, 0.574894, 0.0134435)
+use_collision = true
 size = Vector3(0.107422, 0.187317, 3.54581)
 material = ExtResource("2_xcxso")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.727783, 0.574894, 0.0136876)
+use_collision = true
 size = Vector3(0.107422, 0.187317, 3.5463)
 material = ExtResource("2_xcxso")
 
