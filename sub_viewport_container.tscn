@@ -23,18 +23,18 @@ shader_parameter/to_gradient = SubResource("GradientTexture2D_gcxxy")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wpm43"]
 shader = ExtResource("3_gcxxy")
-shader_parameter/color_bleed_enabled = true
+shader_parameter/color_bleed_enabled = false
 shader_parameter/chromatic_abberation_enabled = true
 shader_parameter/film_grain_enabled = true
 shader_parameter/sharpness_enabled = true
-shader_parameter/chromatic_abberation_seperation = 0.021
+shader_parameter/chromatic_abberation_seperation = 0.037
 shader_parameter/chromatic_abberation_intensity = 1.5
 shader_parameter/chromatic_abberation_blur_strength = 1.0
 shader_parameter/film_grain_intensity = 0.46
 shader_parameter/grain_size = 2.0
-shader_parameter/darkness_clamp = 0.25
+shader_parameter/darkness_clamp = 0.04
 shader_parameter/sharpness_size = 2.0
-shader_parameter/sharpness_intensity = 0.7
+shader_parameter/sharpness_intensity = 2.42
 shader_parameter/color_bleed_seperation = 0.0
 shader_parameter/color_bleed_intensity = 0.0
 shader_parameter/anti_bleed_intensity = 3.0

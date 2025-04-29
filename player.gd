@@ -8,6 +8,8 @@ signal interact_object
 @onready var hand: Node3D = $Head/Camera3D/hand
 @onready var joint = $Head/Camera3D/Generic6DOFJoint3D
 @onready var staticbody = $Head/Camera3D/StaticBody3D
+@onready var hammer_arm: Node3D = $Head/Camera3D/Node3D/HammerArm
+@onready var magnet_arm: Node3D = $Head/Camera3D/Node3D/MagnetArm2
 
 const SPEED := 3.2
 const JUMP_VELOCITY := 0
@@ -21,7 +23,7 @@ const TILT_SPEED := 6.0
 const RETURN_SPEED := 2.0
 
 var picked_object: Node3D = null
-var pull_power = 20
+var pull_power = 10
 var rotation_power = 0.04
 var locked = false
 
@@ -32,9 +34,14 @@ var tilt_target = 0.0
 var tilt_current = 0.0
 var moving_camera = false
 
+var hammer_arm_rot: Basis
+var magnet_arm_rot: Basis
+
 func _ready() -> void:
 	add_to_group("player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	hammer_arm_rot = hammer_arm.global_transform.basis
+	magnet_arm_rot = magnet_arm.global_transform.basis
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -52,6 +59,7 @@ func handle_mouse_look(event: InputEventMouseMotion) -> void:
 func _process(delta: float) -> void:
 	update_interact_ray()
 	update_camera_sway(delta)
+	update_arms_follow(delta)
 
 func update_interact_ray() -> void:
 	pass
@@ -77,6 +85,14 @@ func update_camera_sway(delta: float) -> void:
 
 	moving_camera = false
 
+func update_arms_follow(delta: float) -> void:
+	var target_rot = camera.global_transform.basis
+	var smooth_factor = 5.0
+	hammer_arm_rot = hammer_arm_rot.slerp(target_rot, delta * smooth_factor)
+	magnet_arm_rot = magnet_arm_rot.slerp(target_rot, delta * smooth_factor)
+	hammer_arm.global_transform.basis = hammer_arm_rot
+	magnet_arm.global_transform.basis = magnet_arm_rot
+
 func _physics_process(delta: float) -> void:
 	handle_gravity(delta)
 	handle_movement(delta)
@@ -84,7 +100,16 @@ func _physics_process(delta: float) -> void:
 	if picked_object != null:
 		var a = picked_object.global_transform.origin
 		var b = hand.global_transform.origin
-		picked_object.set_linear_velocity((b - a) * pull_power)
+		var direction = (b - a)
+		picked_object.linear_velocity = direction * pull_power
+
+		if picked_object is RigidBody3D:
+			picked_object.angular_velocity *= 0.1  
+
+		var target_rot = camera.global_transform.basis
+		var obj_transform = picked_object.global_transform
+		obj_transform.basis = obj_transform.basis.slerp(target_rot, delta * 2.0)
+		picked_object.global_transform = obj_transform
 
 func handle_gravity(delta: float) -> void:
 	if not is_on_floor():

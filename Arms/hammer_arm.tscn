@@ -16,7 +16,7 @@ surface_material_override/0 = ExtResource("2_78vj4")
 surface_material_override/1 = ExtResource("2_78vj4")
 
 [node name="Hamma" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1.51459e-08, -0.346497, 0.332174, 0.48, -2.09815e-08, 0, 1.45198e-08, 0.332174, 0.346497, -0.257606, -0.205294, -1.06412)
+transform = Transform3D(-1.51459e-08, -0.346497, 0.155707, 0.48, -2.09815e-08, 7.07768e-15, 1.45198e-08, 0.332174, 0.162421, -0.257606, -0.205294, -1.06412)
 mesh = ExtResource("3_jgtyi")
 surface_material_override/0 = ExtResource("4_mhl6s")
 surface_material_override/1 = ExtResource("5_yd5td")
