@@ -1,15 +1,14 @@
 extends Node3D
 
-var scene = preload("res://sub_viewport_container.tscn")
-var scene2 = preload("res://funky unc needs to spunk.tscn")
-var instance1 = scene.instantiate()
-var instance2 = scene2.instantiate()
+var scene = preload("res://sub_viewport_container.tscn").instantiate()
+#var cur_scene = preload("res://funky unc needs to spunk.tscn")
+#var tree = get_tree()
 
 
 @onready var control = $CanvasLayer/Control
 
 func _on_button_pressed() -> void:
-	add_child(instance1)
-	remove_child(instance2)
+	get_tree().root.add_child(scene)
+#	get_tree().root.remove_child(cur_scene)
 	control.hide()
 	
