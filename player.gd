@@ -72,8 +72,8 @@ func update_camera_sway(delta: float) -> void:
 
 	var bob_offset = Vector3(0, sin(headbob_timer) * HEADBOB_AMOUNT, 0)
 
-	camera.position = Vector3.ZERO + sway_offset + bob_offset
-	camera.rotation.z = deg_to_rad(tilt_current)
+	head.position = sway_offset + bob_offset
+	head.rotation.z = deg_to_rad(tilt_current)
 
 	moving_camera = false
 
@@ -95,7 +95,10 @@ func handle_movement(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	var input_dir = Input.get_vector("A", "D", "W", "S")
-	var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+
+	var head_yaw = head.rotation.y
+	var move_basis = Basis(Vector3.UP, head_yaw)
+	var direction = (move_basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 
 	if direction != Vector3.ZERO:
 		velocity.x = direction.x * SPEED
@@ -109,7 +112,6 @@ func handle_movement(delta: float) -> void:
 func remove_object():
 	if picked_object != null:
 		picked_object = null
-		# joint.set_node_b(joint.get_path())
 
 func drop_object() -> void:
 	if picked_object:
@@ -127,4 +129,3 @@ func pick_object():
 	var collider = interaction.get_collider()
 	if collider != null and collider is RigidBody3D:
 		picked_object = collider
-		#joint.set_node_b(picked_object.get_path())

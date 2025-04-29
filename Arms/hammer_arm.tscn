@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyv6ws0ukayir"]
+[gd_scene load_steps=6 format=3 uid="uid://dyv6ws0ukayir"]
 
 [ext_resource type="ArrayMesh" uid="uid://k8bupil1e2wk" path="res://Models/robotarm.obj" id="1_fl4mt"]
 [ext_resource type="Material" uid="uid://bygxxr3cy3c21" path="res://Materials/Metal2.tres" id="2_78vj4"]
+[ext_resource type="ArrayMesh" uid="uid://dhhxqiew526fv" path="res://Models/hamma.obj" id="3_jgtyi"]
+[ext_resource type="Material" uid="uid://b4d3vqwt41le6" path="res://Materials/new_standard_material_3d.tres" id="4_mhl6s"]
+[ext_resource type="Material" uid="uid://d0ilj32wi5p6d" path="res://Materials/scrapmetaltest.tres" id="5_yd5td"]
 
 [node name="HammerArm" type="Node3D"]
 
@@ -11,3 +14,9 @@ mesh = ExtResource("1_fl4mt")
 skeleton = NodePath("../../..")
 surface_material_override/0 = ExtResource("2_78vj4")
 surface_material_override/1 = ExtResource("2_78vj4")
+
+[node name="Hamma" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.51459e-08, -0.346497, 0.332174, 0.48, -2.09815e-08, 0, 1.45198e-08, 0.332174, 0.346497, -0.257606, -0.205294, -1.06412)
+mesh = ExtResource("3_jgtyi")
+surface_material_override/0 = ExtResource("4_mhl6s")
+surface_material_override/1 = ExtResource("5_yd5td")

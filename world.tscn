@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://50f0tmfk3kso"]
+[gd_scene load_steps=26 format=3 uid="uid://50f0tmfk3kso"]
 
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_ikiii"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_fj7yv"]
@@ -11,13 +11,14 @@
 [ext_resource type="Material" uid="uid://ctej8itjssh72" path="res://Materials/flooroog.tres" id="7_ikiii"]
 [ext_resource type="Texture2D" uid="uid://bum2lxqgpkglr" path="res://Materials/istockphoto-1639475440-612x3.png" id="9_ioo17"]
 [ext_resource type="Texture2D" uid="uid://det2rqpj1hso" path="res://Materials/istockphoto-1639475440-612x612.png" id="10_wse8f"]
-[ext_resource type="PackedScene" path="res://r_ails.tscn" id="11_k3n1d"]
+[ext_resource type="PackedScene" uid="uid://c0loao6mlddsl" path="res://r_ails.tscn" id="11_k3n1d"]
 [ext_resource type="ArrayMesh" uid="uid://cmatrv4hdj343" path="res://Models/coollightsbyantbutnotbroken.obj" id="12_2o6r5"]
 [ext_resource type="Material" uid="uid://co1gcmcp8wluk" path="res://Materials/adadada.tres" id="13_2o6r5"]
 [ext_resource type="Material" uid="uid://dlg1gkeg0xw3q" path="res://Materials/asdasdasdasdada.tres" id="13_hiqwa"]
 [ext_resource type="Material" uid="uid://cmk5s0kitrrtw" path="res://Materials/bright.tres" id="14_2u3nc"]
 [ext_resource type="ArrayMesh" uid="uid://rypdy5bwqwh" path="res://Models/doorbycoolant.obj" id="15_2u3nc"]
 [ext_resource type="Material" uid="uid://bswswcs1gqfbu" path="res://Materials/conveior.tres" id="16_udxuc"]
+[ext_resource type="PackedScene" uid="uid://d35v20mq3mjad" path="res://arm_switcher.tscn" id="19_cbp6q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -781,3 +782,6 @@ skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("13_hiqwa")
 surface_material_override/1 = ExtResource("14_2u3nc")
 surface_material_override/2 = ExtResource("13_2o6r5")
+
+[node name="ArmSwitcher" parent="." instance=ExtResource("19_cbp6q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.78535, -5)
