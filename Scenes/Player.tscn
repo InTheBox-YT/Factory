@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=4 uid="uid://ou06fc2kqk0a"]
 
 [ext_resource type="Script" uid="uid://dt4e0p4tn3nmk" path="res://player.gd" id="1_02mut"]
-[ext_resource type="Script" path="res://Scenes/ArmSwitcher.gd" id="2_gntrk"]
+[ext_resource type="Script" uid="uid://bxxnygi5ekbf" path="res://Scenes/ArmSwitcher.gd" id="2_gntrk"]
 [ext_resource type="Material" uid="uid://bygxxr3cy3c21" path="res://Materials/Metal2.tres" id="3_gntrk"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_djy0i"]
