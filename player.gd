@@ -21,7 +21,7 @@ const TILT_SPEED := 6.0
 const RETURN_SPEED := 2.0
 
 var picked_object: Node3D = null
-var pull_power = 8
+var pull_power = 20
 var rotation_power = 0.04
 var locked = false
 
@@ -43,7 +43,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func handle_mouse_look(event: InputEventMouseMotion) -> void:
 	head.rotate_y(-event.relative.x * SENSITIVITY)
 	camera.rotate_x(-event.relative.y * SENSITIVITY)
-	camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(60))
+	camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-50), deg_to_rad(60))
 	target_sway_offset.x = -event.relative.x * SWAY_AMOUNT
 	target_sway_offset.y = -event.relative.y * SWAY_AMOUNT
 	tilt_target = clamp(event.relative.x * -TILT_AMOUNT, -TILT_AMOUNT, TILT_AMOUNT)
