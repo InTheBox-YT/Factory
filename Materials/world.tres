@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bblg4elf2ws8v"]
+
+[ext_resource type="Texture2D" uid="uid://drb0ng6i1267q" path="res://Materials/images (7).jpg" id="1_gkyvb"]
+
+[resource]
+diffuse_mode = 1
+albedo_color = Color(0.678944, 0.678944, 0.678944, 1)
+albedo_texture = ExtResource("1_gkyvb")
+uv1_scale = Vector3(0.15, 0.15, 0.15)
+uv1_triplanar = true
