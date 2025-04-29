@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyv6ws0ukayir"]
+
+[ext_resource type="ArrayMesh" uid="uid://k8bupil1e2wk" path="res://Models/robotarm.obj" id="1_fl4mt"]
+[ext_resource type="Material" uid="uid://bygxxr3cy3c21" path="res://Materials/Metal2.tres" id="2_78vj4"]
+
+[node name="HammerArm" type="Node3D"]
+
+[node name="Robotarm2" type="MeshInstance3D" parent="."]
+transform = Transform3D(9.39795e-09, -8.21595e-16, 0.215, -1.87959e-08, -0.215, 0, 0.215, -1.87959e-08, -9.39795e-09, -0.175199, 0, -0.676109)
+mesh = ExtResource("1_fl4mt")
+skeleton = NodePath("../../..")
+surface_material_override/0 = ExtResource("2_78vj4")
+surface_material_override/1 = ExtResource("2_78vj4")
