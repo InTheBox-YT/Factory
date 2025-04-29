@@ -42,7 +42,7 @@ script = ExtResource("2_gntrk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.522275, -0.364702, 0)
 
 [node name="HammerArm" parent="Head/Camera3D/Node3D" instance=ExtResource("4_dewec")]
-transform = Transform3D(0.50314, 0.0297473, -0.377975, 0, 0.628058, 0.0494292, 0.379143, -0.0394759, 0.501589, 0.812, -0.228, 0.064)
+transform = Transform3D(0.359965, 0.0405661, -0.515441, 4.61924e-10, 0.628058, 0.0494292, 0.517035, -0.0282425, 0.358855, 0.812, -0.228, 0.064)
 
 [node name="MagnetArm2" parent="Head/Camera3D/Node3D" instance=ExtResource("4_5ixxa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.512434, -0.867469, 0.187859)
