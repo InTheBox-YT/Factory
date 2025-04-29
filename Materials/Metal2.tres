@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://bygxxr3cy3c21"]
+
+[ext_resource type="Texture2D" uid="uid://ddtnsr5ykvi0b" path="res://Models/download (7).jpg" id="1_x4rx5"]
+[ext_resource type="Texture2D" uid="uid://l346nq0jmdfw" path="res://Models/download (7-7).jpg" id="2_6v2ps"]
+
+[resource]
+no_depth_test = true
+diffuse_mode = 1
+albedo_texture = ExtResource("1_x4rx5")
+normal_enabled = true
+normal_scale = -0.77
+normal_texture = ExtResource("2_6v2ps")
+uv1_scale = Vector3(1.17, 1.17, 1.17)

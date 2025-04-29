@@ -661,7 +661,6 @@ bones/40/rotation = Quaternion(-4.65661e-10, 5.79057e-08, -6.61239e-08, 1)
 bones/40/scale = Vector3(1, 1, 1)
 
 [node name="BigBoss_001" type="MeshInstance3D" parent="Skeleton3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_sm5o5")
 skin = SubResource("Skin_huiyg")
 

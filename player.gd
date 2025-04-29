@@ -9,10 +9,10 @@ signal interact_object
 @onready var joint = $Head/Camera3D/Generic6DOFJoint3D
 @onready var staticbody = $Head/Camera3D/StaticBody3D
 
-const SPEED := 3.5
-const JUMP_VELOCITY := 2.7
+const SPEED := 3.2
+const JUMP_VELOCITY := 0
 const SENSITIVITY := 0.002
-const HEADBOB_SPEED := 20.0
+const HEADBOB_SPEED := 0.0
 const HEADBOB_AMOUNT := 0.05
 const SWAY_AMOUNT := 0.0025
 const SWAY_SPEED := 8.0
