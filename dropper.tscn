@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6dr6fhorshkg"]
+[gd_scene load_steps=6 format=3 uid="uid://c6dr6fhorshkg"]
 
 [ext_resource type="Script" uid="uid://ce8hdn38xlw8s" path="res://static_body_3d.gd" id="1_b5pni"]
 [ext_resource type="PackedScene" uid="uid://kjcrgxk2gfsx" path="res://Scrap.tscn" id="2_onh84"]
+[ext_resource type="PackedScene" uid="uid://dqw21ppkvjp2c" path="res://scrap_2.tscn" id="3_mxw2y"]
+[ext_resource type="PackedScene" uid="uid://30m5k8ushs5c" path="res://scrap_3.tscn" id="4_bbx4p"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ptpx3"]
 
@@ -9,7 +11,8 @@
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 script = ExtResource("1_b5pni")
-rigidbody_scene = ExtResource("2_onh84")
+scrap_variants = Array[PackedScene]([ExtResource("2_onh84"), ExtResource("3_mxw2y"), ExtResource("4_bbx4p")])
+scrap_rarities = Array[float]([60.0, 40.0, 20.0])
 max_spawned = 14
 spawn_rate = 2.0
 

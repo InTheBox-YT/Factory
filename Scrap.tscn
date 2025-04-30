@@ -5,10 +5,10 @@
 [ext_resource type="Material" uid="uid://d0ilj32wi5p6d" path="res://Materials/scrapmetaltest.tres" id="3_fyse4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8x125"]
-size = Vector3(2.21926, 2.51607, 0.466972)
+size = Vector3(2.21926, 3.62487, 0.787641)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_clnm7"]
-size = Vector3(1, 0.396606, 1)
+size = Vector3(1, 0.396606, 1.38733)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fyse4"]
 size = Vector3(0.529053, 0.135193, 0.426392)

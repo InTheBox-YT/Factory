@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bbnapw6aacd62" path="res://Models/Scrapyard0105_1_350.jpg" id="1_u0gkg"]
 
 [resource]
+depth_draw_mode = 1
 albedo_texture = ExtResource("1_u0gkg")
 uv1_scale = Vector3(0.045, 0.045, 0.045)
 uv1_triplanar = true

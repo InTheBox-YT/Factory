@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://50f0tmfk3kso"]
+[gd_scene load_steps=27 format=3 uid="uid://50f0tmfk3kso"]
 
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_ikiii"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_fj7yv"]
@@ -19,6 +19,7 @@
 [ext_resource type="ArrayMesh" uid="uid://rypdy5bwqwh" path="res://Models/doorbycoolant.obj" id="15_2u3nc"]
 [ext_resource type="Material" uid="uid://bswswcs1gqfbu" path="res://Materials/conveior.tres" id="16_udxuc"]
 [ext_resource type="PackedScene" uid="uid://d35v20mq3mjad" path="res://arm_switcher.tscn" id="19_cbp6q"]
+[ext_resource type="PackedScene" uid="uid://c4o65ug6qeoky" path="res://scrap_collector.tscn" id="20_26xuy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -609,6 +610,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.36225, 2.17283, 4.90486)
 light_color = Color(0.48123, 0.270642, 2.40654e-07, 1)
 shadow_enabled = true
 
+[node name="OmniLight3D13" type="OmniLight3D" parent="RedLight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15902, 1.95896, 2.62113)
+light_color = Color(0.48123, 0.270642, 2.40654e-07, 1)
+shadow_enabled = true
+
 [node name="OmniLight3D12" type="OmniLight3D" parent="RedLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1813, 2.17283, 4.90486)
 light_color = Color(0.48123, 0.270642, 2.40654e-07, 1)
@@ -785,3 +791,6 @@ surface_material_override/2 = ExtResource("13_2o6r5")
 
 [node name="ArmSwitcher" parent="." instance=ExtResource("19_cbp6q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 1.78535, -5)
+
+[node name="ScrapCollector" parent="." instance=ExtResource("20_26xuy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3146, 1.00449, -4.2818)
