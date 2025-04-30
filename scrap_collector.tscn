@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://lay2ffbyaaet" path="res://Materials/61GYp4QXlAL._AC_UF1000,1000_QL80_.jpg" id="3_jjesk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nd7ea"]
-size = Vector3(0.917603, 1.88812, 0.970703)
+size = Vector3(0.398834, 0.161833, 0.40918)
 
 [node name="ScrapCollector" type="Node3D"]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://cswhm1dev7y8b"]
+[gd_scene load_steps=16 format=4 uid="uid://cswhm1dev7y8b"]
 
 [ext_resource type="Script" uid="uid://dxf6ie55dygry" path="res://rat.gd" id="1_3qrag"]
 [ext_resource type="Texture2D" uid="uid://dl4cakguvnt36" path="res://Models/RAt_RAt.png" id="2_4ap6t"]
 [ext_resource type="Texture2D" uid="uid://cc67sdlgaxcqp" path="res://Models/RAt ded (im so good at 3d modeling)_RAt.png" id="3_8ke84"]
+[ext_resource type="Texture2D" uid="uid://k1jeyu5hdmrx" path="res://Models/RAt.png" id="3_txhpj"]
 [ext_resource type="AudioStream" uid="uid://bh2qa7aqtfuqs" path="res://Models/Bone Break Crack Snap Sound Effect (original).mp3" id="4_p2c4i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p2c4i"]
@@ -48,6 +49,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yiwjf")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_45mav"]
+diffuse_mode = 1
+albedo_texture = ExtResource("3_txhpj")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_diqo7"]
 resource_name = "Material.001"
 cull_mode = 2
@@ -88,11 +93,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_yweo1")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1ge7"]
+diffuse_mode = 1
+albedo_texture = ExtResource("3_8ke84")
+
 [sub_resource type="SphereShape3D" id="SphereShape3D_8ke84"]
 
 [node name="RigidBody3D" type="RigidBody3D"]
 script = ExtResource("1_3qrag")
 move_force = 20.0
+max_speed = 1.7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 0, -0.0230805, 0.00254104)
@@ -102,12 +112,14 @@ shape = SubResource("BoxShape3D_p2c4i")
 transform = Transform3D(0.266667, 0, 0, 0, 0.266667, 0, 0, 0, 0.266667, -0.647101, 0.0854655, 0)
 mesh = SubResource("ArrayMesh_8ke84")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_45mav")
 
 [node name="DeadRat" type="MeshInstance3D" parent="CollisionShape3D"]
 transform = Transform3D(0.323333, 0, 0, 0, 0.323333, 0, 0, 0, 0.323333, -0.700066, 0.201871, 0.0240912)
 visible = false
 mesh = SubResource("ArrayMesh_txhpj")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_c1ge7")
 
 [node name="Area3D" type="Area3D" parent="CollisionShape3D"]
 

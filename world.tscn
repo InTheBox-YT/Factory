@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://50f0tmfk3kso"]
+[gd_scene load_steps=28 format=3 uid="uid://50f0tmfk3kso"]
 
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_ikiii"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_fj7yv"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://d35v20mq3mjad" path="res://arm_switcher.tscn" id="19_cbp6q"]
 [ext_resource type="PackedScene" uid="uid://c4o65ug6qeoky" path="res://scrap_collector.tscn" id="20_26xuy"]
 [ext_resource type="PackedScene" uid="uid://cswhm1dev7y8b" path="res://Rat.tscn" id="21_bc84e"]
+[ext_resource type="PackedScene" uid="uid://ihxhjekl3kwd" path="res://organic_waste.tscn" id="22_wukud"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -810,3 +811,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3146, 1.00449, -4.2818)
 
 [node name="RigidBody3D" parent="." instance=ExtResource("21_bc84e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0109, 0.55, -0.922819)
+
+[node name="OrganicWaste" parent="." instance=ExtResource("22_wukud")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.24818, 1.58623, -5.00074)

@@ -13,6 +13,7 @@ var time_until_change: float = 0.0
 var is_dead: bool = false
 
 func _ready():
+	add_to_group("rat")
 	randomize()
 	time_until_change = move_interval
 	_change_direction()
