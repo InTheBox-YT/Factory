@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=4 uid="uid://c2ee3uhrivs1y"]
+[gd_scene load_steps=7 format=4 uid="uid://c2ee3uhrivs1y"]
 
 [ext_resource type="Material" uid="uid://bygxxr3cy3c21" path="res://Materials/Metal2.tres" id="1_5lpdq"]
+[ext_resource type="Script" uid="uid://cwaipc2qtg717" path="res://Click.gd" id="1_h1d88"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3r75"]
 
@@ -41,6 +42,7 @@ radius = 1.61827
 height = 4.97501
 
 [node name="MagnetArm" type="Node3D"]
+script = ExtResource("1_h1d88")
 
 [node name="MagnetArm" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.5238e-08, -0.0715356, -2.16554e-09, 0.11265, 8.08804e-09, -0.0604096, 0.0604096, 2.96211e-09, 0.11265, 0, 0, 0)

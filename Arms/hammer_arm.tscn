@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dyv6ws0ukayir"]
+[gd_scene load_steps=11 format=4 uid="uid://dyv6ws0ukayir"]
 
 [ext_resource type="ArrayMesh" uid="uid://k8bupil1e2wk" path="res://Models/robotarm.obj" id="1_fl4mt"]
 [ext_resource type="Script" uid="uid://bj177ft3kqqeg" path="res://Arms/hammer_arm.gd" id="1_mhl6s"]
@@ -45,6 +45,9 @@ albedo_texture = ExtResource("5_jgtyi")
 uv1_scale = Vector3(0.02, 0.02, 0.02)
 uv1_triplanar = true
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jgtyi"]
+size = Vector3(4.4006, 10.4287, 1.74487)
+
 [node name="HammerArm" type="Node3D"]
 script = ExtResource("1_mhl6s")
 
@@ -68,3 +71,9 @@ transform = Transform3D(0.179139, -0.0340257, -0.200506, -0.231987, -0.00519692,
 mesh = SubResource("ArrayMesh_mhl6s")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_mhl6s")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.0159334, 0.0141857, -0.0254945, 0.0498772, 0.00111734, 0.0414327, 0.0385149, -0.00731553, -0.0431088, -0.347938, 0.643683, -1.0837)
+shape = SubResource("BoxShape3D_jgtyi")
