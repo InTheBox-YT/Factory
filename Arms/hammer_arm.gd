@@ -8,7 +8,7 @@ var timer := 0.0
 var direction := 1  
 
 var original_rotation := Vector3(deg_to_rad(0), deg_to_rad(90), deg_to_rad(-180))
-var target_rotation := Vector3(deg_to_rad(0), deg_to_rad(120), deg_to_rad(-252))
+var target_rotation := Vector3(deg_to_rad(0), deg_to_rad(130), deg_to_rad(-272))
 
 func _ready():
 	hammer.rotation = original_rotation
