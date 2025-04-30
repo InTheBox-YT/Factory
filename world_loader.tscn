@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bcjvks62timlc"]
+
+[node name="WorldLoader" type="Node3D"]

@@ -248,6 +248,36 @@ use_collision = true
 size = Vector3(0.503418, 4.59656, 3.49882)
 material = ExtResource("1_ikiii")
 
+[node name="CSGBox3D34" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.61402, 1.79828, 0.601619)
+use_collision = true
+size = Vector3(0.503418, 4.59656, 6.70351)
+material = ExtResource("1_ikiii")
+
+[node name="CSGBox3D35" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.533, 1.79828, -0.816044)
+use_collision = true
+size = Vector3(2.5603, 4.59656, 4.25459)
+material = ExtResource("1_ikiii")
+
+[node name="CSGBox3D48" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6067, 1.79828, -2.18379)
+use_collision = true
+size = Vector3(1.48083, 4.59656, 6.99009)
+material = ExtResource("1_ikiii")
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.24829, 1.79828, -4.14222)
+use_collision = true
+size = Vector3(0.503418, 4.59656, 5.17129)
+material = ExtResource("1_ikiii")
+
+[node name="CSGBox3D33" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.24829, 3.52709, -0.550886)
+use_collision = true
+size = Vector3(0.503418, 1.13895, 2.02798)
+material = ExtResource("1_ikiii")
+
 [node name="CSGBox3D17" type="CSGBox3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4178, 1.79828, 3.72323)
 use_collision = true
@@ -374,12 +404,6 @@ use_collision = true
 size = Vector3(0.718162, 3.90129, 0.680445)
 material = ExtResource("7_gbfbk")
 
-[node name="CSGBox3D48" type="CSGBox3D" parent="Map"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.00917, 2.26653, -5.41851)
-use_collision = true
-size = Vector3(0.718162, 3.90129, 0.680445)
-material = ExtResource("7_gbfbk")
-
 [node name="CSGBox3D49" type="CSGBox3D" parent="Map"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.17739, 2.26653, -5.41851)
 use_collision = true
@@ -501,48 +525,24 @@ shadow_enabled = true
 omni_range = 9.54531
 
 [node name="OmniLight3D19" type="OmniLight3D" parent="WhiteLight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0923, 3.26449, -3.62447)
-light_color = Color(0.999999, 0.998228, 0.799519, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3629, 3.26449, -3.62447)
+light_color = Color(0.638884, 2.02149e-06, 4.81307e-07, 1)
 light_energy = 0.484
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.54531
 
 [node name="OmniLight3D20" type="OmniLight3D" parent="WhiteLight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0923, 3.26449, 1.76187)
-light_color = Color(0.999999, 0.998228, 0.799519, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2508, 3.26449, 3.23886)
+light_color = Color(0.638884, 2.02149e-06, 4.81307e-07, 1)
 light_energy = 0.484
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.54531
 
 [node name="OmniLight3D21" type="OmniLight3D" parent="WhiteLight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1854, 3.26449, -3.62447)
-light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
-light_specular = 1.0
-shadow_enabled = true
-omni_range = 9.54531
-
-[node name="OmniLight3D22" type="OmniLight3D" parent="WhiteLight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1854, 3.26449, 1.76187)
-light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
-light_specular = 1.0
-shadow_enabled = true
-omni_range = 9.54531
-
-[node name="OmniLight3D23" type="OmniLight3D" parent="WhiteLight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2938, 3.26449, -3.62447)
-light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
-light_specular = 1.0
-shadow_enabled = true
-omni_range = 9.54531
-
-[node name="OmniLight3D24" type="OmniLight3D" parent="WhiteLight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2938, 3.26449, 1.76187)
-light_color = Color(0.999999, 0.998228, 0.799519, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8608, 3.26449, 3.23886)
+light_color = Color(0.638884, 2.02149e-06, 4.81307e-07, 1)
 light_energy = 0.484
 light_specular = 1.0
 shadow_enabled = true
@@ -724,54 +724,6 @@ surface_material_override/2 = ExtResource("13_2o6r5")
 
 [node name="Coollightsbyantbutnotbroken9" type="MeshInstance3D" parent="LightMesh"]
 transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, -3.42959, 3.9547, -3.57986)
-mesh = ExtResource("12_2o6r5")
-skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("13_hiqwa")
-surface_material_override/1 = ExtResource("14_2u3nc")
-surface_material_override/2 = ExtResource("13_2o6r5")
-
-[node name="Coollightsbyantbutnotbroken14" type="MeshInstance3D" parent="LightMesh"]
-transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, -11.9864, 3.9547, -3.57986)
-mesh = ExtResource("12_2o6r5")
-skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("13_hiqwa")
-surface_material_override/1 = ExtResource("14_2u3nc")
-surface_material_override/2 = ExtResource("13_2o6r5")
-
-[node name="Coollightsbyantbutnotbroken16" type="MeshInstance3D" parent="LightMesh"]
-transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, -11.9864, 3.9547, 1.80648)
-mesh = ExtResource("12_2o6r5")
-skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("13_hiqwa")
-surface_material_override/1 = ExtResource("14_2u3nc")
-surface_material_override/2 = ExtResource("13_2o6r5")
-
-[node name="Coollightsbyantbutnotbroken17" type="MeshInstance3D" parent="LightMesh"]
-transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, -21.0795, 3.9547, -3.57986)
-mesh = ExtResource("12_2o6r5")
-skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("13_hiqwa")
-surface_material_override/1 = ExtResource("14_2u3nc")
-surface_material_override/2 = ExtResource("13_2o6r5")
-
-[node name="Coollightsbyantbutnotbroken18" type="MeshInstance3D" parent="LightMesh"]
-transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, -21.0795, 3.9547, 1.80648)
-mesh = ExtResource("12_2o6r5")
-skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("13_hiqwa")
-surface_material_override/1 = ExtResource("14_2u3nc")
-surface_material_override/2 = ExtResource("13_2o6r5")
-
-[node name="Coollightsbyantbutnotbroken19" type="MeshInstance3D" parent="LightMesh"]
-transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, -29.1879, 3.9547, -3.57986)
-mesh = ExtResource("12_2o6r5")
-skeleton = NodePath("../..")
-surface_material_override/0 = ExtResource("13_hiqwa")
-surface_material_override/1 = ExtResource("14_2u3nc")
-surface_material_override/2 = ExtResource("13_2o6r5")
-
-[node name="Coollightsbyantbutnotbroken20" type="MeshInstance3D" parent="LightMesh"]
-transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, -29.1879, 3.9547, 1.80648)
 mesh = ExtResource("12_2o6r5")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("13_hiqwa")
