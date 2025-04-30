@@ -5,7 +5,7 @@ signal interact_object
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var interaction: RayCast3D = $Head/Camera3D/interaction
-@onready var hand: Node3D = $Head/Camera3D/hand
+@onready var hand: Node3D = $Head/Camera3D/Node3D/MagnetArm2/hand
 @onready var joint = $Head/Camera3D/Generic6DOFJoint3D
 @onready var staticbody = $Head/Camera3D/StaticBody3D
 @onready var hammer_arm: Node3D = $Head/Camera3D/Node3D/HammerArm

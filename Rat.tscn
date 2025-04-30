@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cswhm1dev7y8b"]
+
+[ext_resource type="Script" uid="uid://dxf6ie55dygry" path="res://rat.gd" id="1_3qrag"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3qrag"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3qrag"]
+
+[node name="RigidBody3D" type="RigidBody3D"]
+script = ExtResource("1_3qrag")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("SphereShape3D_3qrag")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+mesh = SubResource("BoxMesh_3qrag")
