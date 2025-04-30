@@ -10,7 +10,7 @@ var time_until_change: float = 0.0
 func _ready():
 	randomize()
 	time_until_change = move_interval
-	
+	_change_direction()
 
 func _physics_process(delta: float) -> void:
 	time_until_change -= delta
@@ -20,6 +20,13 @@ func _physics_process(delta: float) -> void:
 
 	if linear_velocity.length() < max_speed:
 		apply_central_force(move_direction * move_force)
+
+	angular_velocity = Vector3.ZERO
+
+	if move_direction.length_squared() > 0.01:
+		var target = global_transform.origin + move_direction
+		var look_rotation = Transform3D().looking_at(target, Vector3.UP)
+		global_transform.basis = look_rotation.basis
 
 func _change_direction() -> void:
 	var angle = randf() * TAU

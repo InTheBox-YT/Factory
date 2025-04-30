@@ -92,6 +92,5 @@ smash={
 
 [physics]
 
-common/physics_ticks_per_second=45
 3d/physics_engine="GodotPhysics3D"
 common/physics_interpolation=true
