@@ -261,9 +261,9 @@ size = Vector3(2.5603, 4.59656, 4.25459)
 material = ExtResource("1_ikiii")
 
 [node name="CSGBox3D48" type="CSGBox3D" parent="Map"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6067, 1.79828, -2.18379)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6067, 1.81668, -2.18379)
 use_collision = true
-size = Vector3(1.48083, 4.59656, 6.99009)
+size = Vector3(1.48083, 4.63336, 6.99009)
 material = ExtResource("1_ikiii")
 
 [node name="CSGBox3D27" type="CSGBox3D" parent="Map"]
@@ -481,7 +481,7 @@ material = ExtResource("7_gbfbk")
 [node name="OmniLight3D5" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.36818, 3.26449, -1.66462)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 7.23482
@@ -489,7 +489,7 @@ omni_range = 7.23482
 [node name="OmniLight3D7" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2882, 3.26449, -1.66462)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 7.23482
@@ -497,7 +497,7 @@ omni_range = 7.23482
 [node name="OmniLight3D13" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.831, 3.26449, -1.66462)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 7.23482
@@ -505,21 +505,21 @@ omni_range = 7.23482
 [node name="OmniLight3D2" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.47844, 3.26449, 3.58497)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59821, 3.26449, 3.58497)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.53551, 3.26449, -3.62447)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.54531
@@ -527,7 +527,7 @@ omni_range = 9.54531
 [node name="OmniLight3D19" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.3629, 3.26449, -3.62447)
 light_color = Color(0.638884, 2.02149e-06, 4.81307e-07, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.54531
@@ -535,7 +535,7 @@ omni_range = 9.54531
 [node name="OmniLight3D20" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2508, 3.26449, 3.23886)
 light_color = Color(0.638884, 2.02149e-06, 4.81307e-07, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.54531
@@ -543,7 +543,7 @@ omni_range = 9.54531
 [node name="OmniLight3D21" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.8608, 3.26449, 3.23886)
 light_color = Color(0.638884, 2.02149e-06, 4.81307e-07, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.54531
@@ -551,7 +551,7 @@ omni_range = 9.54531
 [node name="OmniLight3D18" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21688, 3.26449, -3.62447)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.54531
@@ -559,21 +559,21 @@ omni_range = 9.54531
 [node name="OmniLight3D9" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.308504, 3.26449, -7.81825)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 
 [node name="OmniLight3D10" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.308504, 3.26449, -13.1134)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 
 [node name="OmniLight3D11" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.308504, 3.26449, -21.6443)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 4096.0
@@ -581,7 +581,7 @@ omni_range = 4096.0
 [node name="OmniLight3D12" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8718, 3.26449, -21.6443)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 4096.0
@@ -589,7 +589,7 @@ omni_range = 4096.0
 [node name="OmniLight3D14" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.308504, 3.26449, -35.4747)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 4096.0
@@ -597,7 +597,7 @@ omni_range = 4096.0
 [node name="OmniLight3D15" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.8718, 3.26449, -35.4747)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 4096.0
@@ -605,7 +605,7 @@ omni_range = 4096.0
 [node name="OmniLight3D16" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4805, 3.26449, -35.4747)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 4096.0
@@ -613,7 +613,7 @@ omni_range = 4096.0
 [node name="OmniLight3D17" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4805, 3.26449, -21.7197)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.484
+light_energy = 0.175
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 4096.0
