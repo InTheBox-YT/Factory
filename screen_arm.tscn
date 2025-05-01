@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bftm38ht28bdp"]
+
+[ext_resource type="ArrayMesh" uid="uid://k8bupil1e2wk" path="res://Models/robotarm.obj" id="1_oq4pr"]
+[ext_resource type="Material" uid="uid://d0ilj32wi5p6d" path="res://Materials/scrapmetaltest.tres" id="2_w7b34"]
+
+[node name="ScreenArm" type="Node3D"]
+
+[node name="Robotarm" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.00130899, -0.249997, 8.37122e-09, 7.06802e-09, -8.33432e-09, -0.25, 0.249997, 0.00130899, 7.02428e-09, 0.0164948, 0.0964439, -0.760367)
+mesh = ExtResource("1_oq4pr")
+surface_material_override/0 = ExtResource("2_w7b34")
+surface_material_override/1 = ExtResource("2_w7b34")
