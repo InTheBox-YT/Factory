@@ -29,6 +29,7 @@ window/vsync/vsync_mode=0
 
 PartDeath="kills the scrap parts"
 hammer=""
+Crafting=""
 
 [input]
 

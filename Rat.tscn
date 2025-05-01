@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=4 uid="uid://cswhm1dev7y8b"]
+[gd_scene load_steps=15 format=4 uid="uid://cswhm1dev7y8b"]
 
 [ext_resource type="Script" uid="uid://dxf6ie55dygry" path="res://rat.gd" id="1_3qrag"]
 [ext_resource type="Texture2D" uid="uid://dl4cakguvnt36" path="res://Models/RAt_RAt.png" id="2_4ap6t"]
 [ext_resource type="Texture2D" uid="uid://cc67sdlgaxcqp" path="res://Models/RAt ded (im so good at 3d modeling)_RAt.png" id="3_8ke84"]
 [ext_resource type="Texture2D" uid="uid://k1jeyu5hdmrx" path="res://Models/RAt.png" id="3_txhpj"]
-[ext_resource type="AudioStream" uid="uid://bh2qa7aqtfuqs" path="res://Models/Bone Break Crack Snap Sound Effect (original).mp3" id="4_p2c4i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p2c4i"]
 size = Vector3(1.90527, 0.333374, 0.503906)
@@ -129,6 +128,5 @@ transform = Transform3D(2.835, 0, 0, 0, 1.205, 0, 0, 0, 1.175, 0, 0, 0)
 shape = SubResource("SphereShape3D_8ke84")
 
 [node name="CrunchSound" type="AudioStreamPlayer3D" parent="CollisionShape3D"]
-stream = ExtResource("4_p2c4i")
 
 [node name="GroundRay" type="RayCast3D" parent="."]
