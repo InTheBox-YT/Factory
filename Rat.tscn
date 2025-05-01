@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://bh2qa7aqtfuqs" path="res://Models/Bone Break Crack Snap Sound Effect (original).mp3" id="4_p2c4i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_p2c4i"]
-size = Vector3(1, 0.333374, 0.503906)
+size = Vector3(1.90527, 0.333374, 0.503906)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ul838"]
 resource_name = "Material.001"
@@ -100,12 +100,13 @@ albedo_texture = ExtResource("3_8ke84")
 [sub_resource type="SphereShape3D" id="SphereShape3D_8ke84"]
 
 [node name="RigidBody3D" type="RigidBody3D"]
+physics_interpolation_mode = 1
 script = ExtResource("1_3qrag")
 move_force = 20.0
 max_speed = 1.7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, 0, -0.0230805, 0.00254104)
+transform = Transform3D(-1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, -5.93561e-09, -0.0230805, -0.00539829)
 shape = SubResource("BoxShape3D_p2c4i")
 
 [node name="AliveRat" type="MeshInstance3D" parent="CollisionShape3D"]
@@ -129,3 +130,5 @@ shape = SubResource("SphereShape3D_8ke84")
 
 [node name="CrunchSound" type="AudioStreamPlayer3D" parent="CollisionShape3D"]
 stream = ExtResource("4_p2c4i")
+
+[node name="GroundRay" type="RayCast3D" parent="."]
