@@ -142,9 +142,9 @@ size = Vector3(11.0623, 4.59656, 21.8579)
 material = ExtResource("1_ikiii")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="Map"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.398, 1.79828, -10.9595)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -18.2728, 1.79828, -10.9595)
 use_collision = true
-size = Vector3(11.0623, 4.59656, 18.7634)
+size = Vector3(11.0623, 4.59656, 32.513)
 material = ExtResource("1_ikiii")
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="Map"]
@@ -154,9 +154,9 @@ size = Vector3(0.503418, 4.59656, 49.3248)
 material = ExtResource("1_ikiii")
 
 [node name="CSGBox3D24" type="CSGBox3D" parent="Map"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.747, 2.11492, 4.9642)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.747, 2.11492, -3.87811)
 use_collision = true
-size = Vector3(3.01978, 4.02478, 1.04205)
+size = Vector3(20.7044, 4.02478, 1.04205)
 material = ExtResource("1_ikiii")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="Map"]
@@ -265,6 +265,12 @@ material = ExtResource("1_ikiii")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.6067, 1.81668, -2.18379)
 use_collision = true
 size = Vector3(1.48083, 4.63336, 6.99009)
+material = ExtResource("1_ikiii")
+
+[node name="CSGBox3D63" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.959, 1.81668, -0.863269)
+use_collision = true
+size = Vector3(4.57684, 4.63336, 4.34905)
 material = ExtResource("1_ikiii")
 
 [node name="CSGBox3D27" type="CSGBox3D" parent="Map"]
@@ -549,6 +555,14 @@ light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.54531
 
+[node name="OmniLight3D22" type="OmniLight3D" parent="WhiteLight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.7796, 3.67618, -4.38084)
+light_color = Color(0.638884, 2.02149e-06, 4.81307e-07, 1)
+light_energy = 0.175
+light_specular = 1.0
+shadow_enabled = true
+omni_range = 9.54531
+
 [node name="OmniLight3D18" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21688, 3.26449, -3.62447)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
@@ -667,13 +681,6 @@ texture = ExtResource("9_ioo17")
 
 [node name="rAILS" parent="." instance=ExtResource("11_k3n1d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.624678, 0.641137, -27.3753)
-
-[node name="Doorbycoolant" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.285, 0, 0, 0, 0.285, 0, 0, 0, 0.285, -3.96971, 1.66402, -5.44476)
-mesh = ExtResource("15_2u3nc")
-surface_material_override/0 = ExtResource("7_gbfbk")
-surface_material_override/1 = ExtResource("16_udxuc")
-surface_material_override/2 = ExtResource("13_2o6r5")
 
 [node name="Doorbycoolant3" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.285, 0, 0, 0, 0.285, 0, 0, 0, 0.285, 18.2337, 1.66402, -5.44476)
@@ -813,4 +820,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3146, 1.00449, -4.2818)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0109, 0.55, -0.922819)
 
 [node name="OrganicWaste" parent="." instance=ExtResource("22_wukud")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.24818, 1.58623, -5.00074)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.26489, 1.58623, -5.00074)
