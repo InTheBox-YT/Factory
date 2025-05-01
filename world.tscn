@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=30 format=3 uid="uid://50f0tmfk3kso"]
-=======
-[gd_scene load_steps=28 format=3 uid="uid://50f0tmfk3kso"]
->>>>>>> parent of 2bd452c (aaaaaaaaaaaaaaaaaaaaa)
+[gd_scene load_steps=29 format=3 uid="uid://hnqlws2chqfn"]
 
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_ikiii"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_fj7yv"]
@@ -26,10 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://day0mkeekgd3b" path="res://rat_dropper.tscn" id="21_wukud"]
 [ext_resource type="Script" uid="uid://b20nh0hbgowa3" path="res://OrganicWasteRats.gd" id="22_il2jm"]
 [ext_resource type="PackedScene" uid="uid://ihxhjekl3kwd" path="res://organic_waste.tscn" id="22_wukud"]
-<<<<<<< HEAD
-[ext_resource type="AudioStream" uid="uid://s32ch2cnygtr" path="res://Industrial Engine Ambience ⚙  ASMR  Machine sounds, creaks, electricity sparks with a heartbeat.mp3" id="23_il2jm"]
-=======
->>>>>>> parent of 2bd452c (aaaaaaaaaaaaaaaaaaaaa)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -70,12 +62,9 @@ dof_blur_amount = 0.02
 [sub_resource type="BoxShape3D" id="BoxShape3D_pkg7o"]
 size = Vector3(1, 1, 1.21875)
 
-<<<<<<< HEAD
 [sub_resource type="BoxShape3D" id="BoxShape3D_wjb0r"]
 size = Vector3(12.6175, 0.428703, 7.7666)
 
-=======
->>>>>>> parent of 2bd452c (aaaaaaaaaaaaaaaaaaaaa)
 [node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -327,9 +316,9 @@ size = Vector3(12.6155, 4.59656, 0.455322)
 material = ExtResource("1_ikiii")
 
 [node name="CSGBox3D26" type="CSGBox3D" parent="Map"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.2148, 1.79828, 3.72323)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.5393, 1.79828, 3.72323)
 use_collision = true
-size = Vector3(2.08804, 4.59656, 0.455322)
+size = Vector3(3.43904, 4.59656, 0.455322)
 material = ExtResource("1_ikiii")
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="Map"]
@@ -853,7 +842,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.0109, 0.55, -0.922819)
 
 [node name="OrganicWaste" parent="." instance=ExtResource("22_wukud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.26489, 1.58623, -5.00074)
-<<<<<<< HEAD
 
 [node name="RatDropper" parent="." instance=ExtResource("21_wukud")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.21312, 0.830802, 4.91656)
@@ -865,9 +853,3 @@ script = ExtResource("22_il2jm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.2, 0.434404, -1.04169, 1.62852)
 shape = SubResource("BoxShape3D_wjb0r")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("23_il2jm")
-autoplay = true
-=======
->>>>>>> parent of 2bd452c (aaaaaaaaaaaaaaaaaaaaa)
