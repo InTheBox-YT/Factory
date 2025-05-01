@@ -1,10 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dnpofjqnmph6h"]
+[gd_scene load_steps=9 format=3 uid="uid://dnpofjqnmph6h"]
 
-[ext_resource type="Shader" uid="uid://8la2r6lcep5x" path="res://pixel.gdshader" id="1_rbxnt"]
-[ext_resource type="PackedScene" uid="uid://50f0tmfk3kso" path="res://world.tscn" id="2_gcxxy"]
+[ext_resource type="Shader" path="res://pixel.gdshader" id="1_rbxnt"]
 [ext_resource type="Shader" uid="uid://b538vfvai2d6v" path="res://cam.gdshader" id="3_gcxxy"]
 [ext_resource type="PackedScene" uid="uid://bcjvks62timlc" path="res://world_loader.tscn" id="3_wpm43"]
-[ext_resource type="Script" uid="uid://dwdmchhpaajmx" path="res://world_loader.gd" id="4_rwk7q"]
 
 [sub_resource type="Gradient" id="Gradient_rbxnt"]
 offsets = PackedFloat32Array(1)
@@ -77,6 +75,3 @@ offset_bottom = 1083.0
 texture = SubResource("CanvasTexture_rwk7q")
 
 [node name="WorldLoader" parent="SubViewport" instance=ExtResource("3_wpm43")]
-script = ExtResource("4_rwk7q")
-
-[node name="World" parent="SubViewport/WorldLoader" instance=ExtResource("2_gcxxy")]
