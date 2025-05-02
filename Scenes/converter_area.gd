@@ -12,3 +12,6 @@ func _on_body_entered(body: Node3D) -> void:
 			new_item.global_transform = body.global_transform 
 			get_tree().current_scene.add_child(new_item)
 			body.queue_free()
+
+func set_crafted_item(new_scene: PackedScene) -> void:
+	crafted_item_scene = new_scene
