@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4o65ug6qeoky"]
+
+[ext_resource type="Script" uid="uid://dy6hicpet076f" path="res://GameWorldAssets/ScrapCollecter.gd" id="1_4lpvm"]
+[ext_resource type="Material" uid="uid://befkntk5yl1cn" path="res://Materials/gridmetal.tres" id="2_it7hl"]
+[ext_resource type="Texture2D" uid="uid://bkyxxw4x35u4b" path="res://2d/black-and-yellow-caution-stripes-tape-seamless-pattern-texture-background-vector.jpg" id="3_it7hl"]
+[ext_resource type="Texture2D" uid="uid://lay2ffbyaaet" path="res://Materials/61GYp4QXlAL._AC_UF1000,1000_QL80_.jpg" id="3_ke28s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nd7ea"]
+size = Vector3(1.2031, 1.5357, 0.950867)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_it7hl"]
+albedo_texture = ExtResource("3_it7hl")
+uv1_scale = Vector3(0.84, 0.84, 0.84)
+uv1_triplanar = true
+
+[node name="ScrapCollector" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("1_4lpvm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.2, 0.0301781, 0.350582, -0.0128236)
+shape = SubResource("BoxShape3D_nd7ea")
+
+[node name="LeftDoor" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.932267, -0.433887, 0)
+use_collision = true
+size = Vector3(1.84738, 0.141, 2.2)
+material = ExtResource("2_it7hl")
+
+[node name="RightDoor" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.984049, -0.433887, 0)
+use_collision = true
+size = Vector3(1.98725, 0.141, 2.2)
+material = ExtResource("2_it7hl")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0291748, 0.467833, -1.05925)
+use_collision = true
+size = Vector3(3.72339, 1.965, 0.1)
+material = ExtResource("2_it7hl")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0386963, -0.349569, 1.05204)
+use_collision = true
+size = Vector3(3.85962, 0.299683, 0.1)
+material = ExtResource("2_it7hl")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.80682, 0.467833, -0.0047189)
+use_collision = true
+size = Vector3(0.150391, 1.965, 2.20906)
+material = ExtResource("2_it7hl")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85447, 0.467833, -0.0047189)
+use_collision = true
+size = Vector3(0.150391, 1.965, 2.20906)
+material = ExtResource("2_it7hl")
+
+[node name="Compressor" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.6473, 0)
+size = Vector3(3.62976, 16.2872, 2.01947)
+material = ExtResource("2_it7hl")
+
+[node name="Compressor2" type="CSGBox3D" parent="Area3D/Compressor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00782114, -7.96047, -0.0200118)
+size = Vector3(3.97665, 0.487339, 2.22557)
+material = SubResource("StandardMaterial3D_it7hl")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2.40846, 0)
+light_color = Color(1, 1, 0.572549, 1)
+shadow_enabled = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.806825, -0.909598)
+shaded = true
+texture = ExtResource("3_ke28s")

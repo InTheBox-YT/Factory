@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6dr6fhorshkg"]
+
+[ext_resource type="Script" uid="uid://ce8hdn38xlw8s" path="res://GameWorldAssets/static_body_3d.gd" id="1_nvsyh"]
+[ext_resource type="PackedScene" uid="uid://kjcrgxk2gfsx" path="res://Scrap/Scrap.tscn" id="2_wquhl"]
+[ext_resource type="PackedScene" uid="uid://dqw21ppkvjp2c" path="res://Scrap/scrap_2.tscn" id="3_lrceu"]
+[ext_resource type="PackedScene" uid="uid://30m5k8ushs5c" path="res://Scrap/scrap_3.tscn" id="4_kfsj8"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ptpx3"]
+
+[node name="Dropper" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+script = ExtResource("1_nvsyh")
+scrap_variants = Array[PackedScene]([ExtResource("2_wquhl"), ExtResource("3_lrceu"), ExtResource("4_kfsj8")])
+scrap_rarities = Array[float]([35.0, 40.0, 35.0])
+max_spawned = 14
+spawn_rate = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.282993, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ptpx3")

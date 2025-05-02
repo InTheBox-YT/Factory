@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://kjcrgxk2gfsx"]
+
+[ext_resource type="Script" uid="uid://c5hisn3b3xcxl" path="res://Scrap/scrap.gd" id="1_ppkgk"]
+[ext_resource type="ArrayMesh" uid="uid://dlcjtho5bjqml" path="res://Models/scraptemp.obj" id="2_sd3u7"]
+[ext_resource type="Material" uid="uid://d0ilj32wi5p6d" path="res://Materials/scrapmetaltest.tres" id="3_ure4e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8x125"]
+size = Vector3(2.21926, 3.62487, 0.787641)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_clnm7"]
+size = Vector3(1, 0.396606, 1.38733)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fyse4"]
+size = Vector3(0.529053, 0.135193, 0.426392)
+
+[node name="Scrap" type="RigidBody3D"]
+process_physics_priority = 1
+collision_layer = 3
+collision_mask = 3
+mass = 0.4
+script = ExtResource("1_ppkgk")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.34, 0, 0, 0, -1.48619e-08, -0.34, 0, 0.34, -1.48619e-08, 0.00701231, 0.0959173, 0.0106786)
+shape = SubResource("BoxShape3D_8x125")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0331521, 0.159714, 0)
+shape = SubResource("BoxShape3D_clnm7")
+
+[node name="Scraptemp" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0.0141094, 0.14693, -0.0118023)
+mesh = ExtResource("2_sd3u7")
+surface_material_override/0 = ExtResource("3_ure4e")
+surface_material_override/1 = ExtResource("3_ure4e")
+surface_material_override/2 = ExtResource("3_ure4e")
+surface_material_override/3 = ExtResource("3_ure4e")
+surface_material_override/4 = ExtResource("3_ure4e")
+surface_material_override/5 = ExtResource("3_ure4e")
+surface_material_override/6 = ExtResource("3_ure4e")
+surface_material_override/7 = ExtResource("3_ure4e")
+surface_material_override/8 = ExtResource("3_ure4e")
+surface_material_override/9 = ExtResource("3_ure4e")
+surface_material_override/10 = ExtResource("3_ure4e")
+surface_material_override/11 = ExtResource("3_ure4e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0423584, 0.213226, 0.194153)
+shape = SubResource("BoxShape3D_fyse4")

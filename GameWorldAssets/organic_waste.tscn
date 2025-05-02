@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://ihxhjekl3kwd"]
+
+[ext_resource type="Script" uid="uid://b20nh0hbgowa3" path="res://GameWorldAssets/OrganicWasteRats.gd" id="1_7p3pc"]
+[ext_resource type="Material" uid="uid://befkntk5yl1cn" path="res://Materials/gridmetal.tres" id="2_r356f"]
+[ext_resource type="Texture2D" uid="uid://dd8rlr05ddd07" path="res://Models/download (3).png" id="3_7p3pc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nd7ea"]
+size = Vector3(0.398834, 0.161833, 0.40918)
+
+[node name="OrganicWaste" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("1_7p3pc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.2, 0.0132295, -1.17513, -0.0461913)
+shape = SubResource("BoxShape3D_nd7ea")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.506885, 0.375)
+use_collision = true
+size = Vector3(1, 1.21377, 0.25)
+material = ExtResource("2_r356f")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.344, 0)
+use_collision = true
+size = Vector3(1, 0.2, 1)
+material = ExtResource("2_r356f")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.031914, -0.426514)
+use_collision = true
+size = Vector3(1, 2.82417, 0.146973)
+material = ExtResource("2_r356f")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.568706, 0.0940314, -0.0090313)
+use_collision = true
+size = Vector3(0.150391, 2.7126, 1.01668)
+material = ExtResource("2_r356f")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.573013, 0.169959, 0.00177193)
+use_collision = true
+size = Vector3(0.150391, 2.56075, 1.00631)
+material = ExtResource("2_r356f")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.506657, 0)
+light_color = Color(1, 0, 0, 1)
+light_energy = 0.174
+shadow_enabled = true
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D"]
+transform = Transform3D(0.38, 0, 0, 0, 0.38, 0, 0, 0, 0.38, 0, 0.840294, -0.344122)
+shaded = true
+texture = ExtResource("3_7p3pc")

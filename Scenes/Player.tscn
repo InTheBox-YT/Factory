@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://ou06fc2kqk0a"]
 
 [ext_resource type="Script" uid="uid://dt4e0p4tn3nmk" path="res://player.gd" id="1_02mut"]
-[ext_resource type="Script" uid="uid://bxxnygi5ekbf" path="res://Scenes/ArmSwitcher.gd" id="2_gntrk"]
-[ext_resource type="PackedScene" uid="uid://c2ee3uhrivs1y" path="res://magnet_arm.tscn" id="4_5ixxa"]
+[ext_resource type="Script" uid="uid://bxxnygi5ekbf" path="res://Arms/ArmSwitcher.gd" id="2_gntrk"]
+[ext_resource type="PackedScene" uid="uid://c2ee3uhrivs1y" path="res://Arms/magnet_arm.tscn" id="4_5ixxa"]
 [ext_resource type="PackedScene" uid="uid://dyv6ws0ukayir" path="res://Arms/hammer_arm.tscn" id="4_dewec"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_djy0i"]
@@ -39,7 +39,7 @@ script = ExtResource("2_gntrk")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.522275, -0.364702, 0)
 
 [node name="HammerArm" parent="Head/Camera3D/Node3D" instance=ExtResource("4_dewec")]
-transform = Transform3D(0.359965, 0.0405661, -0.515441, 4.61924e-10, 0.628058, 0.0494292, 0.517035, -0.0282425, 0.358855, 0.812, -0.228, 0.064)
+transform = Transform3D(0.359965, 0.0405661, -0.515441, 4.61924e-10, 0.628058, 0.0494292, 0.517035, -0.0282425, 0.358855, 0.621091, -0.228, 0.0684927)
 
 [node name="MagnetArm2" parent="Head/Camera3D/Node3D" instance=ExtResource("4_5ixxa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.512434, -0.867469, 0.187859)

@@ -40,7 +40,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ct8m4")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhl6s"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jgtyi"]
+diffuse_mode = 1
 albedo_texture = ExtResource("5_jgtyi")
 uv1_scale = Vector3(0.02, 0.02, 0.02)
 uv1_triplanar = true
@@ -70,7 +71,13 @@ surface_material_override/1 = ExtResource("3_mhl6s")
 transform = Transform3D(0.179139, -0.0340257, -0.200506, -0.231987, -0.00519692, -0.19271, 0.0741086, 0.0659801, -0.118579, 1.55576, 0.172689, 1.53289)
 mesh = SubResource("ArrayMesh_mhl6s")
 skeleton = NodePath("")
-surface_material_override/0 = SubResource("StandardMaterial3D_mhl6s")
+surface_material_override/0 = SubResource("StandardMaterial3D_jgtyi")
+
+[node name="Robotarm4" type="MeshInstance3D" parent="Robotarm2"]
+transform = Transform3D(-0.0349472, -0.00380282, 0.123967, 0.144349, 0.0601545, 0.0263496, -0.064699, 0.136264, -0.00817254, 1.55576, 0.172689, 1.53289)
+mesh = SubResource("ArrayMesh_mhl6s")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_jgtyi")
 
 [node name="Area3D" type="Area3D" parent="Robotarm2" groups=["hammer"]]
 transform = Transform3D(2.03309e-07, -7.02306e-07, 4.65116, -3.06988e-14, -4.65116, -7.02306e-07, 4.65116, 2.66339e-20, -2.03309e-07, 2.72301, -4.11163e-07, 0.91807)
