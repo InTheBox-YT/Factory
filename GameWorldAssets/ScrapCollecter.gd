@@ -1,6 +1,9 @@
 extends Area3D
 
 @export var required_scrap_count: int = 5
+@export var scrap_cube_scene: PackedScene
+@export var scrap_cube_dropper: Node3D
+
 @onready var compressor = $Compressor
 @onready var left_door = $LeftDoor
 @onready var right_door = $RightDoor
@@ -17,7 +20,7 @@ var right_door_closed: Vector3
 var right_door_open: Vector3
 
 var state = "idle"
-var move_speed = 4.0
+var move_speed = 3.0
 var wait_timer = 0.0
 
 func _ready():
@@ -35,11 +38,16 @@ func _ready():
 
 func _process(delta):
 	match state:
+		"preparing":
+			wait_timer -= delta
+			if wait_timer <= 0.0:
+				state = "slamming"
+
 		"slamming":
 			compressor.global_position = compressor.global_position.lerp(slam_position, delta * move_speed)
 			left_door.global_position = left_door.global_position.lerp(left_door_open, delta * move_speed)
 			right_door.global_position = right_door.global_position.lerp(right_door_open, delta * move_speed)
-			
+
 			if compressor.global_position.distance_to(slam_position) < 0.01:
 				compressor.global_position = slam_position
 				left_door.global_position = left_door_open
@@ -79,10 +87,18 @@ func check_quota():
 		return
 
 	is_processing = true
-	state = "slamming"
+	wait_timer = 1.0
+	state = "preparing"
 
 func _delete_scraps():
 	for scrap in scrap_objects:
 		scrap.queue_free()
 	scrap_objects.clear()
-	print("Quota reached! Scraps deleted.")
+	_spawn_scrap_cube()
+
+func _spawn_scrap_cube():
+	if scrap_cube_scene and scrap_cube_dropper:
+		var cube = scrap_cube_scene.instantiate()
+		if cube is Node3D:
+			get_tree().current_scene.add_child(cube)
+			cube.global_transform = scrap_cube_dropper.global_transform

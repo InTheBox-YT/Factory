@@ -1,25 +1,47 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4o65ug6qeoky"]
+[gd_scene load_steps=11 format=3 uid="uid://c4o65ug6qeoky"]
 
 [ext_resource type="Script" uid="uid://dy6hicpet076f" path="res://GameWorldAssets/ScrapCollecter.gd" id="1_4lpvm"]
+[ext_resource type="PackedScene" uid="uid://dr88s15iea5qe" path="res://Scrap/ScrapCube.tscn" id="2_d8glj"]
 [ext_resource type="Material" uid="uid://befkntk5yl1cn" path="res://Materials/gridmetal.tres" id="2_it7hl"]
 [ext_resource type="Texture2D" uid="uid://bkyxxw4x35u4b" path="res://2d/black-and-yellow-caution-stripes-tape-seamless-pattern-texture-background-vector.jpg" id="3_it7hl"]
 [ext_resource type="Texture2D" uid="uid://lay2ffbyaaet" path="res://Materials/61GYp4QXlAL._AC_UF1000,1000_QL80_.jpg" id="3_ke28s"]
+[ext_resource type="Shader" uid="uid://rd5d3rlg3ohc" path="res://GameWorldAssets/fire1.gdshader" id="5_ke28s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nd7ea"]
-size = Vector3(1.2031, 1.5357, 0.950867)
+size = Vector3(1.2031, 2.10574, 0.950867)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_it7hl"]
 albedo_texture = ExtResource("3_it7hl")
 uv1_scale = Vector3(0.84, 0.84, 0.84)
 uv1_triplanar = true
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d8glj"]
+render_priority = 0
+shader = ExtResource("5_ke28s")
+shader_parameter/detail_strength = 3.0
+shader_parameter/scroll_speed = 1.135
+shader_parameter/fire_height = 1.435
+shader_parameter/fire_shape = 1.5
+shader_parameter/fire_thickness = 4.935
+shader_parameter/fire_sharpness = -0.095
+shader_parameter/intensity = 1.0
+shader_parameter/noise_octaves = 6
+shader_parameter/noise_lacunarity = 3.0
+shader_parameter/noise_gain = 0.5
+shader_parameter/noise_amplitude = 1.09
+shader_parameter/noise_frequency = 1.5
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_d8glj"]
+
 [node name="ScrapCollector" type="Node3D"]
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("scrap_cube_dropper")]
 script = ExtResource("1_4lpvm")
+scrap_cube_scene = ExtResource("2_d8glj")
+scrap_cube_dropper = NodePath("../StaticBody3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.2, 0.0301781, 0.350582, -0.0128236)
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.2, 0.0301781, 0.0655617, -0.0128236)
 shape = SubResource("BoxShape3D_nd7ea")
 
 [node name="LeftDoor" type="CSGBox3D" parent="Area3D"]
@@ -77,3 +99,20 @@ shadow_enabled = true
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.806825, -0.909598)
 shaded = true
 texture = ExtResource("3_ke28s")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.218102, -0.769985, 0.0941162)
+use_collision = true
+size = Vector3(4.3485, 0.001, 3.02075)
+material = SubResource("ShaderMaterial_d8glj")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D"]
+light_color = Color(1, 0.701961, 0, 1)
+light_energy = 2.032
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.11, 0, 0, 0, 1, 0.886171, 1.43812, 3.23639)
+mesh = SubResource("CylinderMesh_d8glj")

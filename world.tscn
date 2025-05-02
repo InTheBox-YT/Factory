@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://hnqlws2chqfn"]
+[gd_scene load_steps=24 format=3 uid="uid://hnqlws2chqfn"]
 
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_ikiii"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_fj7yv"]
@@ -12,6 +12,7 @@
 [ext_resource type="Material" uid="uid://co1gcmcp8wluk" path="res://Materials/adadada.tres" id="13_2o6r5"]
 [ext_resource type="Material" uid="uid://dlg1gkeg0xw3q" path="res://Materials/asdasdasdasdada.tres" id="13_hiqwa"]
 [ext_resource type="Material" uid="uid://cmk5s0kitrrtw" path="res://Materials/bright.tres" id="14_2u3nc"]
+[ext_resource type="Texture2D" uid="uid://c5srfcsftrdyh" path="res://2d/5x.png" id="17_udxuc"]
 [ext_resource type="PackedScene" uid="uid://c4o65ug6qeoky" path="res://GameWorldAssets/scrap_collector.tscn" id="20_26xuy"]
 [ext_resource type="PackedScene" uid="uid://day0mkeekgd3b" path="res://GameWorldAssets/rat_dropper.tscn" id="21_wukud"]
 [ext_resource type="Script" uid="uid://b20nh0hbgowa3" path="res://GameWorldAssets/OrganicWasteRats.gd" id="22_il2jm"]
@@ -729,3 +730,8 @@ shape = SubResource("BoxShape3D_wjb0r")
 
 [node name="ScrapCollector" parent="." instance=ExtResource("20_26xuy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2041, 0.90929, -9.25523)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-3.49691e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.49691e-09, 13.161, 1.5309, -5.20809)
+shaded = true
+texture = ExtResource("17_udxuc")

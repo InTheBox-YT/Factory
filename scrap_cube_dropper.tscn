@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://g2x8ki14xmvr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tynx3"]
+
+[node name="ScrapCubeDropper" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_tynx3")
