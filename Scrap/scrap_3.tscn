@@ -4,10 +4,10 @@
 [ext_resource type="Material" uid="uid://d0ilj32wi5p6d" path="res://Materials/scrapmetaltest.tres" id="2_nfq4u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8x125"]
-size = Vector3(2.57411, 3.65124, 0.452731)
+size = Vector3(2.57411, 3.65124, 0.525682)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_clnm7"]
-size = Vector3(1, 0.396606, 1.41437)
+size = Vector3(1, 0.443908, 1.41437)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgko3"]
 
@@ -45,17 +45,17 @@ shadow_mesh = SubResource("ArrayMesh_hnjkr")
 process_physics_priority = 1
 collision_layer = 3
 collision_mask = 3
-mass = 0.4
+mass = 2.0
 script = ExtResource("1_hnjkr")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.34, 0, 0, 0, -1.48619e-08, -0.34, 0, 0.34, -1.48619e-08, -0.086819, 0.0351262, -0.123469)
+transform = Transform3D(0.34, 0, 0, 0, -1.48619e-08, -0.34, 0, 0.34, -1.48619e-08, -0.086819, 0.0475279, -0.123469)
 shape = SubResource("BoxShape3D_8x125")
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0898678, 0.159714, -0.129731)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0898678, 0.136063, -0.129731)
 shape = SubResource("BoxShape3D_clnm7")
 
 [node name="Plane_002" type="MeshInstance3D" parent="."]

@@ -20,7 +20,7 @@ var right_door_closed: Vector3
 var right_door_open: Vector3
 
 var state = "idle"
-var move_speed = 3.0
+var move_speed = 5.0
 var wait_timer = 0.0
 
 func _ready():
@@ -101,4 +101,6 @@ func _spawn_scrap_cube():
 		var cube = scrap_cube_scene.instantiate()
 		if cube is Node3D:
 			get_tree().current_scene.add_child(cube)
-			cube.global_transform = scrap_cube_dropper.global_transform
+			cube.global_position = scrap_cube_dropper.global_position
+			cube.global_rotation = scrap_cube_dropper.global_rotation
+			cube.scale = Vector3(0.185, 0.185, 0.185) 

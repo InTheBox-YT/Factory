@@ -14,7 +14,7 @@ var is_dead: bool = false
 
 func _ready():
 	add_to_group("rat")
-	add_to_group("scrap")
+	#add_to_group("scrap") -will chnage, feels like cheating
 	randomize()
 	time_until_change = move_interval
 	_change_direction()

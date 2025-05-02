@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://hnqlws2chqfn"]
+[gd_scene load_steps=28 format=3 uid="uid://hnqlws2chqfn"]
 
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_t2t4p"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_0pcbe"]
@@ -17,6 +17,10 @@
 [ext_resource type="Script" uid="uid://b20nh0hbgowa3" path="res://Scripts/OrganicWasteRats.gd" id="15_1vso6"]
 [ext_resource type="PackedScene" uid="uid://c4o65ug6qeoky" path="res://Scenes/scrap_collector.tscn" id="16_3ua1v"]
 [ext_resource type="Texture2D" uid="uid://c5srfcsftrdyh" path="res://Materials/5x.png" id="17_r0ikl"]
+[ext_resource type="PackedScene" uid="uid://cpsbde4pebr01" path="res://Scenes/crafter.tscn" id="18_0pcbe"]
+[ext_resource type="ArrayMesh" uid="uid://djkh8pnwi43c3" path="res://Models/magaphones.obj" id="19_1cojt"]
+[ext_resource type="Script" uid="uid://c1eyakt4ccq2" path="res://Scenes/magaphones.gd" id="20_pyn1s"]
+[ext_resource type="AudioStream" uid="uid://cuj8ts3tnhjmh" path="res://Models/output (1).wav" id="20_yq1aw"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -456,14 +460,14 @@ material = ExtResource("5_yq1aw")
 [node name="OmniLight3D2" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3004, 3.26449, 2.17274)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226742, 3.26449, 2.17274)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.787
@@ -471,7 +475,7 @@ omni_range = 9.787
 [node name="OmniLight3D4" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.03607, 3.26449, 2.23248)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.787
@@ -479,7 +483,7 @@ omni_range = 9.787
 [node name="OmniLight3D18" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21688, 3.26449, -4.43732)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.54531
@@ -487,7 +491,7 @@ omni_range = 9.54531
 [node name="OmniLight3D19" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2137, 3.26449, -4.55819)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 67.98
@@ -495,14 +499,22 @@ omni_range = 67.98
 [node name="OmniLight3D9" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.308504, 3.26449, -8.47903)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 
 [node name="OmniLight3D11" type="OmniLight3D" parent="WhiteLight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97921, 3.26449, -8.47903)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97921, 3.26449, -9.24244)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
+light_specular = 1.0
+shadow_enabled = true
+omni_range = 9.787
+
+[node name="OmniLight3D20" type="OmniLight3D" parent="WhiteLight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52996, 3.26449, -8.47903)
+light_color = Color(0.999999, 0.998228, 0.799519, 1)
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.787
@@ -510,7 +522,7 @@ omni_range = 9.787
 [node name="OmniLight3D10" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.308504, 3.26449, -14.8157)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 7.96
@@ -518,7 +530,15 @@ omni_range = 7.96
 [node name="OmniLight3D12" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.91728, 3.26449, -14.8157)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
+light_specular = 1.0
+shadow_enabled = true
+omni_range = 9.787
+
+[node name="OmniLight3D21" type="OmniLight3D" parent="WhiteLight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.09621, 2.17349, -16.7545)
+light_color = Color(0.999999, 0.998228, 0.799519, 1)
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 9.787
@@ -526,7 +546,7 @@ omni_range = 9.787
 [node name="OmniLight3D13" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.308504, 3.26449, -22.6887)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 7.96
@@ -534,7 +554,7 @@ omni_range = 7.96
 [node name="OmniLight3D15" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.308504, 3.26449, -29.9506)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 omni_range = 7.96
@@ -542,21 +562,21 @@ omni_range = 7.96
 [node name="OmniLight3D16" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.01528, 3.26449, -22.4614)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 
 [node name="OmniLight3D17" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.01528, 3.26449, -29.9433)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 
 [node name="OmniLight3D14" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.91728, 3.26449, -22.6887)
 light_color = Color(0.999999, 0.998228, 0.799519, 1)
-light_energy = 0.175
+light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
 
@@ -667,7 +687,7 @@ surface_material_override/1 = ExtResource("11_hmc15")
 surface_material_override/2 = ExtResource("12_dt0r1")
 
 [node name="Coollightsbyantbutnotbroken13" type="MeshInstance3D" parent="LightMesh"]
-transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, -8.13852, 3.9547, -8.45431)
+transform = Transform3D(0.47, 0, 0, 0, 0.47, 0, 0, 0, 0.47, -8.13852, 3.9547, -9.21772)
 mesh = ExtResource("9_i4fjy")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("10_pt3ps")
@@ -735,3 +755,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2041, 0.90929, -9.25523)
 transform = Transform3D(-3.49691e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.49691e-09, 13.161, 1.5309, -5.20809)
 shaded = true
 texture = ExtResource("17_r0ikl")
+
+[node name="Crafter" parent="." instance=ExtResource("18_0pcbe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.74734, 0.506717, -7.39506)
+
+[node name="Magaphones" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0634305, 0, -0.323847, 0, 0.33, 0, 0.323847, 0, 0.0634305, -5.95303, 3.33815, -18.0569)
+mesh = ExtResource("19_1cojt")
+script = ExtResource("20_pyn1s")
+
+[node name="AudioPlayer" type="AudioStreamPlayer3D" parent="Magaphones"]
+transform = Transform3D(0.582466, -0.787007, -2.86777, 3.38663e-08, -2.92226, 0.801961, -2.9738, -0.154148, -0.561698, 1.60528, 0.137994, 0.139542)
+stream = ExtResource("20_yq1aw")
+autoplay = true
+max_distance = 13.0
+emission_angle_degrees = 65.0
+doppler_tracking = 2

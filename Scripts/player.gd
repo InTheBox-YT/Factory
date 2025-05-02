@@ -87,7 +87,7 @@ func update_camera_sway(delta: float) -> void:
 
 func update_arms_follow(delta: float) -> void:
 	var target_rot = camera.global_transform.basis
-	var smooth_factor = 5.0
+	var smooth_factor = 10.0
 	hammer_arm_rot = hammer_arm_rot.slerp(target_rot, delta * smooth_factor)
 	magnet_arm_rot = magnet_arm_rot.slerp(target_rot, delta * smooth_factor)
 	hammer_arm.global_transform.basis = hammer_arm_rot

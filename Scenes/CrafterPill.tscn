@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6idoifusc02t"]
+
+[ext_resource type="ArrayMesh" uid="uid://c5bngqxuc2ywd" path="res://Models/wateringcan.obj" id="1_44b8n"]
+[ext_resource type="Material" uid="uid://befkntk5yl1cn" path="res://Materials/gridmetal.tres" id="2_n80fn"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ad8qc"]
+height = 0.709717
+radius = 0.0810547
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_n80fn"]
+height = 0.72139
+radius = 0.352051
+
+[node name="RigidBody3D" type="RigidBody3D"]
+transform = Transform3D(-0.341499, 0, 0.424739, 0, 0.545, 0, -0.424739, 0, -0.341499, 0, 0, 0)
+
+[node name="Wateringcan" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.536, 0, -5.96046e-08, 0, 0.536, 0, 5.96046e-08, 0, -0.536, -0.115611, 0.310486, -0.0872175)
+mesh = ExtResource("1_44b8n")
+surface_material_override/0 = ExtResource("2_n80fn")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.241134, 0.285622, -0.265133, -0.0454096, -0.289066, -0.352703, -0.387057, 0.211853, -0.123797, -0.288942, 0.288473, -0.218145)
+shape = SubResource("CylinderShape3D_ad8qc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.626901, 0, 2.98023e-08, 0, 0.6269, 0, -2.98023e-08, 0, -0.626901, -0.00519548, 0.197088, 0.0136074)
+shape = SubResource("CylinderShape3D_n80fn")
