@@ -3,7 +3,7 @@
 [ext_resource type="ArrayMesh" uid="uid://k8bupil1e2wk" path="res://Models/robotarm.obj" id="1_fl4mt"]
 [ext_resource type="Script" uid="uid://bj177ft3kqqeg" path="res://Arms/hammer_arm.gd" id="1_mhl6s"]
 [ext_resource type="ArrayMesh" uid="uid://dhhxqiew526fv" path="res://Models/hamma.obj" id="3_jgtyi"]
-[ext_resource type="Material" uid="uid://72dfws07bjd2" path="res://asdasdasdasdasdasda.tres" id="3_mhl6s"]
+[ext_resource type="Material" uid="uid://72dfws07bjd2" path="res://Materials/asdasdasdasdasdasda.tres" id="3_mhl6s"]
 [ext_resource type="Texture2D" uid="uid://bbnapw6aacd62" path="res://Models/Scrapyard0105_1_350.jpg" id="5_jgtyi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_isa4x"]

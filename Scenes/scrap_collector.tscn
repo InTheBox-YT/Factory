@@ -1,11 +1,11 @@
 [gd_scene load_steps=11 format=3 uid="uid://c4o65ug6qeoky"]
 
-[ext_resource type="Script" uid="uid://dy6hicpet076f" path="res://GameWorldAssets/ScrapCollecter.gd" id="1_4lpvm"]
+[ext_resource type="Script" uid="uid://dy6hicpet076f" path="res://Scripts/ScrapCollecter.gd" id="1_4lpvm"]
 [ext_resource type="PackedScene" uid="uid://dr88s15iea5qe" path="res://Scrap/ScrapCube.tscn" id="2_d8glj"]
 [ext_resource type="Material" uid="uid://befkntk5yl1cn" path="res://Materials/gridmetal.tres" id="2_it7hl"]
-[ext_resource type="Texture2D" uid="uid://bkyxxw4x35u4b" path="res://2d/black-and-yellow-caution-stripes-tape-seamless-pattern-texture-background-vector.jpg" id="3_it7hl"]
+[ext_resource type="Texture2D" uid="uid://bkyxxw4x35u4b" path="res://Materials/black-and-yellow-caution-stripes-tape-seamless-pattern-texture-background-vector.jpg" id="3_it7hl"]
 [ext_resource type="Texture2D" uid="uid://lay2ffbyaaet" path="res://Materials/61GYp4QXlAL._AC_UF1000,1000_QL80_.jpg" id="3_ke28s"]
-[ext_resource type="Shader" uid="uid://rd5d3rlg3ohc" path="res://GameWorldAssets/fire1.gdshader" id="5_ke28s"]
+[ext_resource type="Shader" uid="uid://rd5d3rlg3ohc" path="res://Shaders/fire1.gdshader" id="5_ke28s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nd7ea"]
 size = Vector3(1.2031, 2.10574, 0.950867)

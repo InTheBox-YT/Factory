@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://day0mkeekgd3b"]
 
-[ext_resource type="Script" uid="uid://hyjl0sq0mx6n" path="res://GameWorldAssets/RatDropper.gd" id="1_on66g"]
+[ext_resource type="Script" uid="uid://hyjl0sq0mx6n" path="res://Scripts/RatDropper.gd" id="1_on66g"]
 [ext_resource type="PackedScene" uid="uid://cswhm1dev7y8b" path="res://Scrap/Rat.tscn" id="2_nm4qy"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ptpx3"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=4 uid="uid://c2ee3uhrivs1y"]
 
 [ext_resource type="Material" uid="uid://bygxxr3cy3c21" path="res://Materials/Metal2.tres" id="1_5lpdq"]
-[ext_resource type="Script" uid="uid://cwaipc2qtg717" path="res://Click.gd" id="1_h1d88"]
+[ext_resource type="Script" uid="uid://cwaipc2qtg717" path="res://Scripts/Click.gd" id="1_h1d88"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3r75"]
 

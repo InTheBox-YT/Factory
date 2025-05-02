@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ihxhjekl3kwd"]
 
-[ext_resource type="Script" uid="uid://b20nh0hbgowa3" path="res://GameWorldAssets/OrganicWasteRats.gd" id="1_7p3pc"]
+[ext_resource type="Script" uid="uid://b20nh0hbgowa3" path="res://Scripts/OrganicWasteRats.gd" id="1_7p3pc"]
 [ext_resource type="Material" uid="uid://befkntk5yl1cn" path="res://Materials/gridmetal.tres" id="2_r356f"]
 [ext_resource type="Texture2D" uid="uid://dd8rlr05ddd07" path="res://Models/download (3).png" id="3_7p3pc"]
 

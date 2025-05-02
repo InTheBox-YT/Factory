@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cqjnwx1wtd5jo"]
 
-[ext_resource type="Script" uid="uid://cvqs5t7aeyu4h" path="res://GameWorldAssets/Convior.gd" id="1_7i0kd"]
+[ext_resource type="Script" uid="uid://cvqs5t7aeyu4h" path="res://Scripts/Convior.gd" id="1_7i0kd"]
 [ext_resource type="Material" uid="uid://bswswcs1gqfbu" path="res://Materials/conveior.tres" id="2_vs1x5"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_xcxso"]

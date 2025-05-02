@@ -25,6 +25,18 @@ window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/vsync/vsync_mode=0
 
+[file_customization]
+
+folder_colors={
+"res://Arms/": "teal",
+"res://Materials/": "yellow",
+"res://Models/": "orange",
+"res://Scenes/": "blue",
+"res://Scrap/": "gray",
+"res://Scripts/": "green",
+"res://Shaders/": "red"
+}
+
 [global_group]
 
 PartDeath="kills the scrap parts"
