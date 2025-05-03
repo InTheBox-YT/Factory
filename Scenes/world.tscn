@@ -47,6 +47,8 @@ glow_map_strength = 1.0
 fog_enabled = true
 fog_light_color = Color(0, 0, 0, 1)
 fog_density = 0.0732
+fog_sky_affect = 0.0
+volumetric_fog_albedo = Color(0, 0, 0, 1)
 adjustment_enabled = true
 adjustment_brightness = 1.17
 adjustment_contrast = 1.17
@@ -463,6 +465,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.226742, 3.26449, 2.17274)
@@ -470,6 +473,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 9.787
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="WhiteLight"]
@@ -478,6 +482,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 9.787
 
 [node name="OmniLight3D18" type="OmniLight3D" parent="WhiteLight"]
@@ -486,6 +491,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 9.54531
 
 [node name="OmniLight3D19" type="OmniLight3D" parent="WhiteLight"]
@@ -494,6 +500,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 67.98
 
 [node name="OmniLight3D9" type="OmniLight3D" parent="WhiteLight"]
@@ -502,6 +509,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 
 [node name="OmniLight3D11" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.49738, 3.26449, -9.30709)
@@ -509,6 +517,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 9.787
 
 [node name="OmniLight3D20" type="OmniLight3D" parent="WhiteLight"]
@@ -517,6 +526,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 9.787
 
 [node name="OmniLight3D10" type="OmniLight3D" parent="WhiteLight"]
@@ -525,6 +535,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 7.96
 
 [node name="OmniLight3D12" type="OmniLight3D" parent="WhiteLight"]
@@ -533,6 +544,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 9.787
 
 [node name="OmniLight3D22" type="OmniLight3D" parent="WhiteLight"]
@@ -541,6 +553,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 9.787
 
 [node name="OmniLight3D21" type="OmniLight3D" parent="WhiteLight"]
@@ -549,6 +562,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 9.787
 
 [node name="OmniLight3D13" type="OmniLight3D" parent="WhiteLight"]
@@ -557,6 +571,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 7.96
 
 [node name="OmniLight3D15" type="OmniLight3D" parent="WhiteLight"]
@@ -565,6 +580,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 omni_range = 7.96
 
 [node name="OmniLight3D16" type="OmniLight3D" parent="WhiteLight"]
@@ -573,6 +589,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 
 [node name="OmniLight3D17" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.01528, 3.26449, -29.9433)
@@ -580,6 +597,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 
 [node name="OmniLight3D14" type="OmniLight3D" parent="WhiteLight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.91728, 3.26449, -22.6887)
@@ -587,6 +605,7 @@ light_color = Color(0.999999, 0.998228, 0.799519, 1)
 light_energy = 0.07
 light_specular = 1.0
 shadow_enabled = true
+shadow_blur = 1.355
 
 [node name="Dropper" parent="WhiteLight" instance=ExtResource("6_pyn1s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5619, 3.7444, 4.94858)
