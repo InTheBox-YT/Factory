@@ -1,7 +1,7 @@
 extends RigidBody3D
 
 @onready var death_detector: Area3D = $Area3D
-@export var scrap_type: String = "metal_a"
+@export var scrap_type: String = "metal_c"
 
 func _ready() -> void:
 	add_to_group("scrap")

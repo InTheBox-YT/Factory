@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://30m5k8ushs5c"]
 
-[ext_resource type="Script" uid="uid://c5hisn3b3xcxl" path="res://Scrap/scrap.gd" id="1_hnjkr"]
+[ext_resource type="Script" uid="uid://u66uyv1s25c" path="res://Scrap/scrap_3.gd" id="1_nwxfb"]
 [ext_resource type="Material" uid="uid://d0ilj32wi5p6d" path="res://Materials/scrapmetaltest.tres" id="2_nfq4u"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8x125"]
@@ -46,7 +46,7 @@ process_physics_priority = 1
 collision_layer = 3
 collision_mask = 3
 mass = 2.0
-script = ExtResource("1_hnjkr")
+script = ExtResource("1_nwxfb")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.34, 0, 0, 0, -1.48619e-08, -0.34, 0, 0.34, -1.48619e-08, -0.086819, 0.0475279, -0.123469)

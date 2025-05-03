@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://coeirxy5oj6sc"]
 
 [ext_resource type="Script" uid="uid://btk1biox2aouv" path="res://Scenes/converter_area.gd" id="4_vb542"]
-[ext_resource type="PackedScene" uid="uid://c6idoifusc02t" path="res://Scenes/CrafterPill.tscn" id="5_iid2q"]
+[ext_resource type="PackedScene" uid="uid://c6idoifusc02t" path="res://Scenes/WateringCan.tscn" id="5_iid2q"]
 [ext_resource type="Material" uid="uid://d1rwv737cvubm" path="res://Materials/blackconc.tres" id="6_07sbr"]
 [ext_resource type="Script" uid="uid://cvqs5t7aeyu4h" path="res://Scripts/Convior.gd" id="7_mt1it"]
 [ext_resource type="Material" uid="uid://bswswcs1gqfbu" path="res://Materials/conveior.tres" id="8_bohgk"]
@@ -13,7 +13,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_plkk3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jgl2g"]
-size = Vector3(1.42566, 0.306152, 1.5293)
+size = Vector3(3.28363, 1.86835, 1.5293)
 
 [sub_resource type="BoxMesh" id="BoxMesh_d3pm3"]
 
@@ -65,7 +65,7 @@ script = ExtResource("4_vb542")
 crafted_item_scene = ExtResource("5_iid2q")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ConverterArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21283, 1.27646, -0.264648)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14182, 0.921022, -0.264648)
 shape = SubResource("BoxShape3D_jgl2g")
 
 [node name="OmniLight3D9" type="OmniLight3D" parent="."]

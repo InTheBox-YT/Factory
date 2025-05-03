@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cpsbde4pebr01"]
 
 [ext_resource type="Script" uid="uid://btk1biox2aouv" path="res://Scenes/converter_area.gd" id="1_0rc8x"]
-[ext_resource type="PackedScene" uid="uid://c6idoifusc02t" path="res://Scenes/CrafterPill.tscn" id="2_37sf6"]
+[ext_resource type="PackedScene" uid="uid://c6idoifusc02t" path="res://Scenes/WateringCan.tscn" id="2_37sf6"]
 [ext_resource type="Material" uid="uid://d1rwv737cvubm" path="res://Materials/blackconc.tres" id="3_6qp44"]
 [ext_resource type="Script" uid="uid://cvqs5t7aeyu4h" path="res://Scripts/Convior.gd" id="3_gp2dr"]
 [ext_resource type="Material" uid="uid://bswswcs1gqfbu" path="res://Materials/conveior.tres" id="4_6qp44"]

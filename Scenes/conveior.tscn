@@ -16,7 +16,7 @@ size = Vector3(1, 0.0600586, 3.54492)
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 18.126, 0, 0, 0)
 script = ExtResource("1_17fd5")
-belt_speed = 0.2
+belt_speed = 0.25
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1.48154, 0, 0, 0, 0.102559, 0, 0, 0, 3.5455, 0, 0.549771, 0.0133911)
@@ -30,7 +30,7 @@ shape = SubResource("BoxShape3D_4vdxm")
 [node name="Area3D" type="Area3D" parent="StaticBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D/Area3D"]
-transform = Transform3D(1.47576, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.617542, 0.0141603)
+transform = Transform3D(1.47576, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.643674, 0.0141603)
 shape = SubResource("BoxShape3D_e6r1j")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D"]
