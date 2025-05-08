@@ -17,17 +17,17 @@ uv1_triplanar = true
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d8glj"]
 render_priority = 0
 shader = ExtResource("5_ke28s")
-shader_parameter/detail_strength = 3.0
-shader_parameter/scroll_speed = 1.135
+shader_parameter/detail_strength = 0.555
+shader_parameter/scroll_speed = 0.81
 shader_parameter/fire_height = 1.435
 shader_parameter/fire_shape = 1.5
 shader_parameter/fire_thickness = 4.935
 shader_parameter/fire_sharpness = -0.095
-shader_parameter/intensity = 1.0
+shader_parameter/intensity = 1.2
 shader_parameter/noise_octaves = 6
 shader_parameter/noise_lacunarity = 2.745
 shader_parameter/noise_gain = 0.5
-shader_parameter/noise_amplitude = 0.56
+shader_parameter/noise_amplitude = 0.7
 shader_parameter/noise_frequency = 1.5
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_d8glj"]
@@ -99,9 +99,9 @@ shaded = true
 texture = ExtResource("3_ke28s")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.299384, -0.647615, -0.135315)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0182468, -0.525245, -0.135315)
 use_collision = true
-size = Vector3(5.00924, 0.245739, 3.47961)
+size = Vector3(5.57151, 0.001, 3.47961)
 material = SubResource("ShaderMaterial_d8glj")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="CSGBox3D"]
