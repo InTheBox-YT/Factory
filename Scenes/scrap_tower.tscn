@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://dx7ih66o2m6c0"]
 
-[ext_resource type="Script" uid="uid://btftditkiekvf" path="res://Scrap/scrap_cube.gd" id="1_ysrs5"]
+[ext_resource type="Script" uid="uid://dglhu3rcxxm1d" path="res://Scenes/scrap_tower.gd" id="1_ysrs5"]
 [ext_resource type="Material" uid="uid://d0ilj32wi5p6d" path="res://Materials/scrapmetaltest.tres" id="2_eqvg3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_alpua"]
@@ -44,7 +44,7 @@ mass = 2.0
 script = ExtResource("1_ysrs5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.19, -1.18424e-15, 0, 1.18424e-15, 0.19, 0, 0, 0, 0.19, -0.00125814, 0.020387, -0.0092286)
+transform = Transform3D(0.11, -6.85613e-16, 0, 6.85613e-16, 0.11, 0, 0, 0, 0.11, -0.00125814, 0.020387, -0.0092286)
 shape = SubResource("BoxShape3D_alpua")
 
 [node name="Plane2" type="MeshInstance3D" parent="CollisionShape3D"]
@@ -84,7 +84,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_eqvg3")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.19, -8.88178e-16, 0, 8.88178e-16, 0.19, 0, 0, 0, 0.19, -0.35955, 0.020387, -0.0092286)
+transform = Transform3D(0.11, -4.44089e-16, 0, 4.44089e-16, 0.11, 0, 0, 0, 0.11, -0.224812, 0.020387, -0.0092286)
 shape = SubResource("BoxShape3D_alpua")
 
 [node name="Plane2" type="MeshInstance3D" parent="CollisionShape3D2"]
@@ -124,7 +124,7 @@ skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_eqvg3")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.19, 0, 0, 0, 0.19, 0, 0, 0, 0.19, -0.767506, 0.020387, -0.0092286)
+transform = Transform3D(0.11, 4.44089e-16, 0, -4.44089e-16, 0.11, 0, 0, 0, 0.11, -0.449886, 0.020387, -0.0092286)
 shape = SubResource("BoxShape3D_alpua")
 
 [node name="Plane2" type="MeshInstance3D" parent="CollisionShape3D3"]

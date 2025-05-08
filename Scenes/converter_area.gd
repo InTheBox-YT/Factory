@@ -12,15 +12,14 @@ var scrap_cubes: Array[Node3D] = []
 
 var door_closed_pos: Vector3
 var door_open_pos: Vector3
-
-var door_is_opening := false
-var door_is_closing := false
-var door_speed := 3.0
+var door_speed: float = 3.0
+var door_timer: float = 0.0
+var door_state: String = "closed"
 
 func _ready():
 	connect("body_entered", Callable(self, "_on_body_entered"))
-	door_closed_pos = floor_door.position
-	door_open_pos = door_closed_pos + Vector3(1.0, 0, 0)
+	door_closed_pos = floor_door.transform.origin
+	door_open_pos = door_closed_pos + Vector3(0, 0, 1.9)
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group("scrap_cube") and not scrap_cubes.has(body):
@@ -67,20 +66,21 @@ func _clear_scrap_cubes(types_used: Array) -> void:
 		scrap_cubes.erase(cube)
 
 func _physics_process(delta: float) -> void:
-	if door_is_opening:
-		floor_door.position = floor_door.position.lerp(door_open_pos, door_speed * delta)
-		if floor_door.position.distance_to(door_open_pos) < 0.01:
-			floor_door.position = door_open_pos
-			door_is_opening = false
-			await get_tree().create_timer(1.0).timeout
-			door_is_closing = true
-
-	elif door_is_closing:
-		floor_door.position = floor_door.position.lerp(door_closed_pos, door_speed * delta)
-		if floor_door.position.distance_to(door_closed_pos) < 0.01:
-			floor_door.position = door_closed_pos
-			door_is_closing = false
+	if door_state == "opening":
+		floor_door.transform.origin = floor_door.transform.origin.lerp(door_open_pos, door_speed * delta)
+		if floor_door.transform.origin.distance_to(door_open_pos) < 0.01:
+			floor_door.transform.origin = door_open_pos
+			door_state = "open"
+			door_timer = 1.0
+	elif door_state == "open":
+		door_timer -= delta
+		if door_timer <= 0:
+			door_state = "closing"
+	elif door_state == "closing":
+		floor_door.transform.origin = floor_door.transform.origin.lerp(door_closed_pos, door_speed * delta)
+		if floor_door.transform.origin.distance_to(door_closed_pos) < 0.01:
+			floor_door.transform.origin = door_closed_pos
+			door_state = "closed"
 
 func _open_floor_door():
-	door_is_opening = true
-	door_is_closing = false
+	door_state = "opening"

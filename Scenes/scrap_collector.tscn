@@ -36,6 +36,7 @@ shader_parameter/noise_frequency = 1.5
 
 [node name="Area3D" type="Area3D" parent="." node_paths=PackedStringArray("scrap_cube_dropper")]
 script = ExtResource("1_4lpvm")
+required_scrap_count = 3
 scrap_cube_dropper = NodePath("../StaticBody3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
