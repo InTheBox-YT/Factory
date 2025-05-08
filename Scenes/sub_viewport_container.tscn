@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dnpofjqnmph6h"]
+[gd_scene load_steps=12 format=3 uid="uid://dnpofjqnmph6h"]
 
 [ext_resource type="Shader" uid="uid://8la2r6lcep5x" path="res://Shaders/pixel.gdshader" id="1_rbxnt"]
+[ext_resource type="Shader" uid="uid://c0ctiawl74n7x" path="res://Scenes/aasdas.gdshader" id="3_2de4x"]
 [ext_resource type="Shader" uid="uid://b538vfvai2d6v" path="res://Shaders/cam.gdshader" id="3_gcxxy"]
 [ext_resource type="PackedScene" uid="uid://bcjvks62timlc" path="res://Scenes/world_loader.tscn" id="3_wpm43"]
 
@@ -43,6 +44,13 @@ shader_parameter/color_bleed_quality = 5
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_rwk7q"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nrad2"]
+shader = ExtResource("3_2de4x")
+shader_parameter/warp_intensity = 0.03
+shader_parameter/time_scale = 1.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_2de4x"]
+
 [node name="SubViewportContainer" type="SubViewportContainer"]
 material = SubResource("ShaderMaterial_niex8")
 anchors_preset = 15
@@ -73,5 +81,16 @@ material = SubResource("ShaderMaterial_wpm43")
 offset_right = 1924.0
 offset_bottom = 1083.0
 texture = SubResource("CanvasTexture_rwk7q")
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport/CanvasLayer"]
+visible = false
+z_index = 3
+material = SubResource("ShaderMaterial_nrad2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_2de4x")
 
 [node name="WorldLoader" parent="SubViewport" instance=ExtResource("3_wpm43")]

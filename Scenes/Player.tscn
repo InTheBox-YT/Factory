@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ou06fc2kqk0a"]
+[gd_scene load_steps=8 format=3 uid="uid://ou06fc2kqk0a"]
 
 [ext_resource type="Script" uid="uid://dt4e0p4tn3nmk" path="res://Scripts/player.gd" id="1_02mut"]
 [ext_resource type="Script" uid="uid://bxxnygi5ekbf" path="res://Arms/ArmSwitcher.gd" id="2_gntrk"]
@@ -9,6 +9,8 @@
 height = 2.13057
 
 [sub_resource type="SphereMesh" id="SphereMesh_rpqav"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_dewec"]
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_02mut")
@@ -72,3 +74,16 @@ grow_vertical = 2
 position = Vector2(20, 20)
 scale = Vector2(4.25454, 4.25454)
 mesh = SubResource("SphereMesh_rpqav")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("CanvasTexture_dewec")
