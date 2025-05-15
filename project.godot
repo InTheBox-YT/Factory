@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="FactoryBot"
-run/main_scene="uid://dnpofjqnmph6h"
+run/main_scene="uid://coawdg7v6dnpb"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

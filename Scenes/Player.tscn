@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ou06fc2kqk0a"]
 
 [ext_resource type="Script" uid="uid://dt4e0p4tn3nmk" path="res://Scripts/player.gd" id="1_02mut"]
-[ext_resource type="Script" uid="uid://bxxnygi5ekbf" path="res://Arms/ArmSwitcher.gd" id="2_gntrk"]
+[ext_resource type="Script" path="res://Arms/ArmSwitcher.gd" id="2_gntrk"]
 [ext_resource type="PackedScene" uid="uid://c2ee3uhrivs1y" path="res://Arms/magnet_arm.tscn" id="4_5ixxa"]
 [ext_resource type="PackedScene" uid="uid://dyv6ws0ukayir" path="res://Arms/hammer_arm.tscn" id="4_dewec"]
 
