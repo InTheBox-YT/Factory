@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk23lv28po6ue"]
+
+[ext_resource type="Script" uid="uid://cqpxk6t1etlt2" path="res://Scenes/pause_menu.gd" id="1_emv3i"]
+
+[node name="PauseMenu" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_emv3i")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.05
+anchor_right = 0.675
+offset_left = 195.0
+offset_top = 365.0
+offset_right = 525.0
+offset_bottom = 765.0
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+color = Color(0.415686, 0.415686, 0.415686, 0.772549)
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 804.0
+offset_top = 176.0
+offset_right = 851.0
+offset_bottom = 207.0
+scale = Vector2(2.43157, 2.96401)
+text = "PLAY"
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
