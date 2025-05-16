@@ -20,11 +20,11 @@ anchor_right = 0.675
 offset_left = 195.0
 offset_top = 365.0
 offset_right = 525.0
-offset_bottom = 765.0
+offset_bottom = 765.495
 grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-color = Color(0.415686, 0.415686, 0.415686, 0.772549)
+color = Color(0.415686, 0.415686, 0.415686, 1)
 
 [node name="Button" type="Button" parent="ColorRect"]
 layout_mode = 0
