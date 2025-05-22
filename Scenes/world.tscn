@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://hnqlws2chqfn"]
 
-[ext_resource type="Script" uid="uid://btnmkpwcuass2" path="res://Scenes/world.gd" id="1_pyn1s"]
+[ext_resource type="Script" path="res://Scripts/world.gd" id="1_pyn1s"]
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_t2t4p"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_0pcbe"]
 [ext_resource type="PackedScene" uid="uid://bjul10h6aoivw" path="res://Scenes/conveior.tscn" id="3_axeuq"]

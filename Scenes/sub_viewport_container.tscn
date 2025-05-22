@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/sub_viewport_container.gd" id="2_nrad2"]
 [ext_resource type="Shader" path="res://Scenes/aasdas.gdshader" id="3_2de4x"]
 [ext_resource type="Shader" uid="uid://b538vfvai2d6v" path="res://Shaders/cam.gdshader" id="3_gcxxy"]
-[ext_resource type="PackedScene" uid="uid://bcjvks62timlc" path="res://Scenes/world_loader.tscn" id="3_wpm43"]
+[ext_resource type="PackedScene" path="res://Scenes/world_loader.tscn" id="3_wpm43"]
 
 [sub_resource type="Gradient" id="Gradient_rbxnt"]
 offsets = PackedFloat32Array(1)
