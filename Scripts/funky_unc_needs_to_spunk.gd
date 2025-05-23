@@ -10,10 +10,10 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	control.hide()
-	var instance = Player.instantiate()
-	add_child(instance)
-	get_node("Node").queue_free()
-	
+	#var instance = Player.instantiate()
+	#add_child(instance)
+	#get_node("Node").queue_free()
+	get_node("LoadingScreen").loadLevel("res://Scenes/sub_viewport_container.tscn")
 	
 	
 	

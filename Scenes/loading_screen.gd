@@ -4,7 +4,7 @@ var loading : bool
 var path : String
 var WaitForInput : bool
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if loading:
 		var progress = []
 		var status = ResourceLoader.load_threaded_get_status(path, progress)
