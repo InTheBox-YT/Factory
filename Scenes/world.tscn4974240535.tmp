@@ -870,7 +870,7 @@ shape = SubResource("BoxShape3D_hmc15")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Day 1"]
 mesh = SubResource("BoxMesh_dt0r1")
 
-[node name="LoadingScreen" parent="Day 1" instance=ExtResource("25_pt3ps")]
+[node name="LoadingScreen" parent="." instance=ExtResource("25_pt3ps")]
 visible = false
 
 [connection signal="area_entered" from="Day 1" to="Day 1" method="_on_area_entered"]
