@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://duqulte2ph8f3"]
+[gd_scene load_steps=6 format=3 uid="uid://duqulte2ph8f3"]
 
 [ext_resource type="Script" uid="uid://cq1s8t7lfptfd" path="res://Scripts/funky_unc_needs_to_spunk.gd" id="1_c86jq"]
-[ext_resource type="PackedScene" uid="uid://cmmn3885pd7pj" path="res://Scenes/LoadingScreen.tscn" id="2_hp7c0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mriwg"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -66,8 +65,5 @@ vertical_alignment = 3
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Node"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3.20322)
-
-[node name="LoadingScreen" parent="." instance=ExtResource("2_hp7c0")]
-visible = false
 
 [connection signal="pressed" from="Node/CanvasLayer/Control/Button" to="." method="_on_button_pressed"]

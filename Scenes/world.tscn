@@ -1,6 +1,5 @@
-[gd_scene load_steps=34 format=3 uid="uid://hnqlws2chqfn"]
+[gd_scene load_steps=33 format=3 uid="uid://hnqlws2chqfn"]
 
-[ext_resource type="Script" path="res://Scripts/world.gd" id="1_pyn1s"]
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_t2t4p"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_0pcbe"]
 [ext_resource type="PackedScene" uid="uid://bjul10h6aoivw" path="res://Scenes/conveior.tscn" id="3_axeuq"]
@@ -19,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://c4o65ug6qeoky" path="res://Scenes/scrap_collector.tscn" id="16_3ua1v"]
 [ext_resource type="Texture2D" uid="uid://c5srfcsftrdyh" path="res://Materials/5x.png" id="17_r0ikl"]
 [ext_resource type="ArrayMesh" uid="uid://djkh8pnwi43c3" path="res://Models/magaphones.obj" id="19_1cojt"]
-[ext_resource type="Script" path="res://Scenes/magaphones.gd" id="20_pyn1s"]
+[ext_resource type="Script" uid="uid://c1eyakt4ccq2" path="res://Scenes/magaphones.gd" id="20_pyn1s"]
 [ext_resource type="AudioStream" uid="uid://cuj8ts3tnhjmh" path="res://Models/output (1).wav" id="20_yq1aw"]
 [ext_resource type="PackedScene" uid="uid://coeirxy5oj6sc" path="res://Scenes/crafting_terminal.tscn" id="21_yq1aw"]
 [ext_resource type="PackedScene" uid="uid://bk23lv28po6ue" path="res://Scenes/pause_menu.tscn" id="23_no8kt"]
@@ -75,7 +74,6 @@ size = Vector3(12.6175, 0.428703, 7.7666)
 [sub_resource type="BoxMesh" id="BoxMesh_dt0r1"]
 
 [node name="World" type="Node3D"]
-script = ExtResource("1_pyn1s")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_aqk2v")
@@ -859,6 +857,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.01284, 0.524156, -17.2816)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5619, 3.7444, 4.94858)
 
 [node name="PauseMenu" parent="." instance=ExtResource("23_no8kt")]
+script = null
 
 [node name="Day 1" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1099, 1.20517, 2.70958)

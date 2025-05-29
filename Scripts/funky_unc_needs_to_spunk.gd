@@ -6,14 +6,11 @@ var Player = preload("res://Scenes/sub_viewport_container.tscn")
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
-@onready var control = $Node/CanvasLayer/Control
 
 func _on_button_pressed() -> void:
-	control.hide()
+	
 	#var instance = Player.instantiate()
-	#add_child(instance)
-	#get_node("Node").queue_free()
-	get_node("LoadingScreen").loadLevel("res://Scenes/sub_viewport_container.tscn")
-	
-	
+	var loading_scene = preload("res://Scenes/LoadingScreen.tscn").instantiate()
+	add_child(loading_scene) #please
+	loading_scene.load_level("res://Scenes/sub_viewport_container.tscn")
 	
