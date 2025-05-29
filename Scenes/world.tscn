@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://hnqlws2chqfn"]
+[gd_scene load_steps=34 format=3 uid="uid://hnqlws2chqfn"]
 
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_t2t4p"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_0pcbe"]
@@ -70,8 +70,12 @@ size = Vector3(1, 1, 1.21875)
 size = Vector3(12.6175, 0.428703, 7.7666)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hmc15"]
+size = Vector3(1, 0.947815, 0.276855)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dt0r1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xbk3s"]
+size = Vector3(1, 1.00781, 0.52002)
 
 [node name="World" type="Node3D"]
 
@@ -861,65 +865,85 @@ script = null
 
 [node name="Day 1 Cube" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1099, 1.20517, 2.70958)
+input_ray_pickable = false
 script = ExtResource("24_i4fjy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Day 1 Cube"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.366058, -0.0144043)
 shape = SubResource("BoxShape3D_hmc15")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Day 1 Cube"]
-transform = Transform3D(0.455524, 0, 0, 0, 1, 0, 0, 0, 0.331416, 0, 0, 0)
-mesh = SubResource("BoxMesh_dt0r1")
+[node name="Node" type="Node" parent="Day 1 Cube"]
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Day 1 Cube"]
-transform = Transform3D(0.455524, 0, 0, 0, 0.261595, 0, 0, 0, 0.47514, 0, 0.583991, 0.113432)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Day 1 Cube/Node"]
+transform = Transform3D(0.455524, 0, 0, 0, 1, 0, 0, 0, 0.331416, -4.1099, 1.20517, 2.70958)
 mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Day 1 Cube/Node"]
+transform = Transform3D(0.455524, 0, 0, 0, 0.261595, 0, 0, 0, 0.47514, -4.1099, 1.78916, 2.82301)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
 
 [node name="Day 2 Cube" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.09811, 1.26628, 0.633471)
+input_ray_pickable = false
 script = ExtResource("25_i4fjy")
 
+[node name="Node" type="Node" parent="Day 2 Cube"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Day 2 Cube/Node"]
+transform = Transform3D(0.51888, 0, 0, 0, 0.700062, 0.0990551, 0, -0.215608, 0.321624, -4.09811, 1.26628, 0.633471)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Day 2 Cube/Node"]
+transform = Transform3D(0.551384, 0.019151, 0.0216463, -0.0226221, 0.219825, -0.111738, -0.057845, 0.0965803, 0.250033, -4.09811, 1.64337, 0.54098)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Day 2 Cube/Node"]
+transform = Transform3D(0.551384, 0.019151, 0.0216463, -0.0226221, 0.219825, -0.111738, -0.057845, 0.0965803, 0.250033, -4.09811, 1.7875, 0.621994)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Day 2 Cube/Node"]
+transform = Transform3D(0.5474, 0.0181501, 0.0398783, 0.0618284, 0.0819004, -0.256531, -0.06643, 0.225788, 0.089846, -4.09811, 1.94561, 0.718533)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Day 2 Cube/Node"]
+transform = Transform3D(0.543648, 0.0349892, 0.0378108, 0.0849645, -0.0244326, -0.270045, -0.0714844, 0.237058, -0.0334133, -4.09811, 1.94561, 0.894312)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Day 2 Cube/Node"]
+transform = Transform3D(0.546145, 0.0360668, 0.0257496, 0.0757889, -0.0743309, -0.258603, -0.062161, 0.226256, -0.0890625, -4.09811, 1.94561, 1.13913)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Day 2 Cube/Node"]
+transform = Transform3D(0.552105, 0.000315258, 0.027396, -0.0528005, -0.0691019, 0.26187, 0.0165668, -0.230743, -0.0783862, -4.0783, 0.967227, 0.717455)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Day 2 Cube/Node"]
+transform = Transform3D(0.552105, 0.000315258, 0.027396, -0.0528005, -0.0691019, 0.26187, 0.0165668, -0.230743, -0.0783862, -4.0783, 0.967227, 0.938357)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Day 2 Cube/Node"]
+transform = Transform3D(0.552105, 0.000315258, 0.027396, -0.0528005, -0.0691019, 0.26187, 0.0165668, -0.230743, -0.0783862, -4.09083, 0.935935, 0.555584)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Day 2 Cube/Node"]
+transform = Transform3D(0.54149, 0.00873468, 0.059135, -0.113704, 0.118508, 0.232449, -0.0417391, -0.209516, 0.133944, -4.10467, 0.907458, 0.373058)
+mesh = SubResource("BoxMesh_dt0r1")
+skeleton = NodePath("../..")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Day 2 Cube"]
-shape = SubResource("BoxShape3D_hmc15")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Day 2 Cube"]
-transform = Transform3D(0.51888, 0, 0, 0, 0.700062, 0.0990551, 0, -0.215608, 0.321624, 0, 0, 0)
-mesh = SubResource("BoxMesh_dt0r1")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Day 2 Cube"]
-transform = Transform3D(0.551384, 0.019151, 0.0216463, -0.0226221, 0.219825, -0.111738, -0.057845, 0.0965803, 0.250033, 0, 0.377092, -0.0924914)
-mesh = SubResource("BoxMesh_dt0r1")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Day 2 Cube"]
-transform = Transform3D(0.551384, 0.019151, 0.0216463, -0.0226221, 0.219825, -0.111738, -0.057845, 0.0965803, 0.250033, 0, 0.521228, -0.0114766)
-mesh = SubResource("BoxMesh_dt0r1")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Day 2 Cube"]
-transform = Transform3D(0.5474, 0.0181501, 0.0398783, 0.0618284, 0.0819004, -0.256531, -0.06643, 0.225788, 0.089846, 0, 0.679336, 0.0850623)
-mesh = SubResource("BoxMesh_dt0r1")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Day 2 Cube"]
-transform = Transform3D(0.543648, 0.0349892, 0.0378108, 0.0849645, -0.0244326, -0.270045, -0.0714844, 0.237058, -0.0334133, 0, 0.679336, 0.260841)
-mesh = SubResource("BoxMesh_dt0r1")
-
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Day 2 Cube"]
-transform = Transform3D(0.546145, 0.0360668, 0.0257496, 0.0757889, -0.0743309, -0.258603, -0.062161, 0.226256, -0.0890625, 0, 0.679336, 0.505658)
-mesh = SubResource("BoxMesh_dt0r1")
-
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="Day 2 Cube"]
-transform = Transform3D(0.552105, 0.000315258, 0.027396, -0.0528005, -0.0691019, 0.26187, 0.0165668, -0.230743, -0.0783862, 0.0198112, -0.299049, 0.0839843)
-mesh = SubResource("BoxMesh_dt0r1")
-
-[node name="MeshInstance3D10" type="MeshInstance3D" parent="Day 2 Cube"]
-transform = Transform3D(0.552105, 0.000315258, 0.027396, -0.0528005, -0.0691019, 0.26187, 0.0165668, -0.230743, -0.0783862, 0.0198112, -0.299049, 0.304886)
-mesh = SubResource("BoxMesh_dt0r1")
-
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="Day 2 Cube"]
-transform = Transform3D(0.552105, 0.000315258, 0.027396, -0.0528005, -0.0691019, 0.26187, 0.0165668, -0.230743, -0.0783862, 0.00728178, -0.330341, -0.0778873)
-mesh = SubResource("BoxMesh_dt0r1")
-
-[node name="MeshInstance3D9" type="MeshInstance3D" parent="Day 2 Cube"]
-transform = Transform3D(0.54149, 0.00873468, 0.059135, -0.113704, 0.118508, 0.232449, -0.0417391, -0.209516, 0.133944, -0.00655746, -0.358818, -0.260413)
-mesh = SubResource("BoxMesh_dt0r1")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.426758, -0.0100098)
+shape = SubResource("BoxShape3D_xbk3s")
 
 [connection signal="area_entered" from="Day 1 Cube" to="Day 1 Cube" method="_on_area_entered"]
 [connection signal="area_entered" from="Day 2 Cube" to="Day 2 Cube" method="_on_area_entered"]
