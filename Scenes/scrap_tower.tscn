@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=4 uid="uid://dx7ih66o2m6c0"]
 
-[ext_resource type="Script" uid="uid://dglhu3rcxxm1d" path="res://Scenes/scrap_tower.gd" id="1_ysrs5"]
+[ext_resource type="Script" uid="uid://dglhu3rcxxm1d" path="res://Scripts/scrap_tower.gd" id="1_ysrs5"]
 [ext_resource type="Material" uid="uid://d0ilj32wi5p6d" path="res://Materials/scrapmetaltest.tres" id="2_eqvg3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_alpua"]

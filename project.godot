@@ -15,6 +15,10 @@ run/main_scene="uid://duqulte2ph8f3"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SteamSettings="*res://Scripts/SteamSettings.gd"
+
 [display]
 
 window/size/viewport_width=1920
@@ -34,7 +38,8 @@ folder_colors={
 "res://Scenes/": "blue",
 "res://Scrap/": "gray",
 "res://Scripts/": "green",
-"res://Shaders/": "red"
+"res://Shaders/": "red",
+"res://addons/": "purple"
 }
 
 [global_group]

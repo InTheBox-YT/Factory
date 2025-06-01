@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://coeirxy5oj6sc"]
 
 [ext_resource type="Material" uid="uid://befkntk5yl1cn" path="res://Materials/gridmetal.tres" id="2_5vbbh"]
-[ext_resource type="Script" uid="uid://btk1biox2aouv" path="res://Scenes/converter_area.gd" id="4_vb542"]
+[ext_resource type="Script" uid="uid://btk1biox2aouv" path="res://Scripts/converter_area.gd" id="4_vb542"]
 [ext_resource type="Material" uid="uid://d1rwv737cvubm" path="res://Materials/blackconc.tres" id="6_07sbr"]
 [ext_resource type="Script" uid="uid://cvqs5t7aeyu4h" path="res://Scripts/Convior.gd" id="7_mt1it"]
 [ext_resource type="Material" uid="uid://bswswcs1gqfbu" path="res://Materials/conveior.tres" id="8_bohgk"]
