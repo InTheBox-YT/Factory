@@ -41,7 +41,7 @@ shader_parameter/chromatic_abberation_intensity = 1.5
 shader_parameter/chromatic_abberation_blur_strength = 1.0
 shader_parameter/film_grain_intensity = 0.46
 shader_parameter/grain_size = 2.0
-shader_parameter/darkness_clamp = 0.04
+shader_parameter/darkness_clamp = 0.0
 shader_parameter/sharpness_size = 2.0
 shader_parameter/sharpness_intensity = 2.42
 shader_parameter/color_bleed_seperation = 0.0
@@ -82,7 +82,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CanvasTexture_2de4x")
 
-[node name="Piss Filter" type="ColorRect" parent="SubViewport/CanvasLayer"]
+[node name="mexico filter" type="ColorRect" parent="SubViewport/CanvasLayer"]
 top_level = true
 offset_right = 1925.0
 offset_bottom = 1088.0
