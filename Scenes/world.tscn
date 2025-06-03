@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://hnqlws2chqfn"]
+[gd_scene load_steps=35 format=3 uid="uid://hnqlws2chqfn"]
 
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_t2t4p"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_0pcbe"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://bk23lv28po6ue" path="res://Scenes/pause_menu.tscn" id="23_no8kt"]
 [ext_resource type="Script" uid="uid://b25wr4ou5gk8x" path="res://Scripts/Bed.gd" id="24_i4fjy"]
 [ext_resource type="Script" uid="uid://3bqel8baflfs" path="res://Scripts/day_2_cube.gd" id="25_i4fjy"]
+[ext_resource type="PackedScene" uid="uid://bqthcmxtev4vy" path="res://cart.tscn" id="25_pt3ps"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -902,6 +903,9 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Day 2 Cube"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.426758, -0.0100098)
 shape = SubResource("BoxShape3D_xbk3s")
+
+[node name="Cart" parent="." instance=ExtResource("25_pt3ps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65364, 1.1035, -27.7642)
 
 [connection signal="area_entered" from="Day 1 Cube" to="Day 1 Cube" method="_on_area_entered"]
 [connection signal="area_entered" from="Day 2 Cube" to="Day 2 Cube" method="_on_area_entered"]
