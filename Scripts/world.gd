@@ -14,11 +14,11 @@ func pauseMenu():
 		pmenu.hide()
 		Engine.time_scale = 1
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		player.show()
+		#player.show()
 	else:
 		pmenu.show()
 		Engine.time_scale = 0
-		player.hide()
+		#player.hide()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	paused = !paused

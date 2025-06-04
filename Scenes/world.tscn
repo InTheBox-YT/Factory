@@ -80,6 +80,10 @@ size = Vector3(1, 1.00781, 0.52002)
 
 [node name="World" type="Node3D"]
 
+[node name="PauseMenu" parent="." instance=ExtResource("23_no8kt")]
+top_level = true
+script = null
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_aqk2v")
 camera_attributes = SubResource("CameraAttributesPractical_036b0")
@@ -818,9 +822,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.01284, 0.524156, -17.2816)
 
 [node name="Dropper" parent="." instance=ExtResource("6_pyn1s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.5619, 3.7444, 4.94858)
-
-[node name="PauseMenu" parent="." instance=ExtResource("23_no8kt")]
-script = null
 
 [node name="Day 1 Cube" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1099, 1.20517, 2.70958)
