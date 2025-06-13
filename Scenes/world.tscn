@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://hnqlws2chqfn"]
+[gd_scene load_steps=38 format=3 uid="uid://hnqlws2chqfn"]
 
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_t2t4p"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_0pcbe"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" uid="uid://b25wr4ou5gk8x" path="res://Scripts/Bed.gd" id="24_i4fjy"]
 [ext_resource type="Script" uid="uid://3bqel8baflfs" path="res://Scripts/day_2_cube.gd" id="25_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://bqthcmxtev4vy" path="res://cart.tscn" id="25_pt3ps"]
+[ext_resource type="PackedScene" uid="uid://bcragvteq00so" path="res://Models/clock_out.tscn" id="26_pt3ps"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -71,12 +72,17 @@ size = Vector3(1, 1, 1.21875)
 size = Vector3(12.6175, 0.428703, 7.7666)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hmc15"]
-size = Vector3(1, 0.947815, 0.276855)
+size = Vector3(0.26825, 0.180435, 0.276855)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dt0r1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xbk3s"]
 size = Vector3(1, 1.00781, 0.52002)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pt3ps"]
+size = Vector3(0.28125, 0.0498047, 0.262207)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hmc15"]
 
 [node name="World" type="Node3D"]
 
@@ -829,19 +835,11 @@ input_ray_pickable = false
 script = ExtResource("24_i4fjy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Day 1 Cube"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.366058, -0.0144043)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75483, 0.649376, -0.598542)
 shape = SubResource("BoxShape3D_hmc15")
 
-[node name="Node" type="Node" parent="Day 1 Cube"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Day 1 Cube/Node"]
-transform = Transform3D(0.455524, 0, 0, 0, 1, 0, 0, 0, 0.331416, -4.1099, 1.20517, 2.70958)
-mesh = SubResource("BoxMesh_dt0r1")
-skeleton = NodePath("../..")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Day 1 Cube/Node"]
-transform = Transform3D(0.455524, 0, 0, 0, 0.261595, 0, 0, 0, 0.47514, -4.1099, 1.78916, 2.82301)
-mesh = SubResource("BoxMesh_dt0r1")
+[node name="ClockOut" parent="Day 1 Cube" instance=ExtResource("26_pt3ps")]
+transform = Transform3D(0.304718, 0, 0, 0, 0.209247, 0, 0, 0, 0.209247, -1.45889, 0.76035, -0.426116)
 skeleton = NodePath("../..")
 
 [node name="Day 2 Cube" type="Area3D" parent="."]
@@ -906,7 +904,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.426758, -0.0100098)
 shape = SubResource("BoxShape3D_xbk3s")
 
 [node name="Cart" parent="." instance=ExtResource("25_pt3ps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65364, 1.1035, -27.7642)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65364, 1.1035, -22.7205)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.359334, 1.4569, 1.86283)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.359375, 0.475098, -0.368896)
+shape = SubResource("BoxShape3D_pt3ps")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(0.239447, 0, 0, 0, 0.0519473, 0, 0, 0, 0.278823, 0.362779, 0.473315, -0.371495)
+mesh = SubResource("BoxMesh_hmc15")
+skeleton = NodePath("../..")
 
 [connection signal="area_entered" from="Day 1 Cube" to="Day 1 Cube" method="_on_area_entered"]
 [connection signal="area_entered" from="Day 2 Cube" to="Day 2 Cube" method="_on_area_entered"]

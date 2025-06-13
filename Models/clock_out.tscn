@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcragvteq00so"]
+
+[ext_resource type="ArrayMesh" uid="uid://j3bsc1ccwqp5" path="res://Models/NewScrapCubes/Clock out.obj" id="1_ab17n"]
+
+[node name="ClockOut" type="MeshInstance3D"]
+mesh = ExtResource("1_ab17n")
