@@ -1,11 +1,13 @@
-[gd_scene load_steps=38 format=3 uid="uid://hnqlws2chqfn"]
+[gd_scene load_steps=40 format=3 uid="uid://hnqlws2chqfn"]
 
 [ext_resource type="Material" uid="uid://bblg4elf2ws8v" path="res://Materials/world.tres" id="1_t2t4p"]
 [ext_resource type="PackedScene" uid="uid://ou06fc2kqk0a" path="res://Scenes/Player.tscn" id="2_0pcbe"]
 [ext_resource type="PackedScene" uid="uid://bjul10h6aoivw" path="res://Scenes/conveior.tscn" id="3_axeuq"]
 [ext_resource type="Material" uid="uid://ctej8itjssh72" path="res://Materials/flooroog.tres" id="4_1cojt"]
+[ext_resource type="Script" uid="uid://b64ixqxrlsim7" path="res://Scenes/ConveyorSound.gd" id="5_dt0r1"]
 [ext_resource type="Material" uid="uid://d1rwv737cvubm" path="res://Materials/blackconc.tres" id="5_yq1aw"]
 [ext_resource type="PackedScene" uid="uid://c6dr6fhorshkg" path="res://Scenes/dropper.tscn" id="6_pyn1s"]
+[ext_resource type="AudioStream" uid="uid://db12jr8sh5js8" path="res://Audio/Conveyor.mp3" id="6_qebug"]
 [ext_resource type="Texture2D" uid="uid://bum2lxqgpkglr" path="res://Materials/istockphoto-1639475440-612x3.png" id="7_no8kt"]
 [ext_resource type="Texture2D" uid="uid://det2rqpj1hso" path="res://Materials/istockphoto-1639475440-612x612.png" id="8_xbk3s"]
 [ext_resource type="ArrayMesh" uid="uid://cmatrv4hdj343" path="res://Models/coollightsbyantbutnotbroken.obj" id="9_i4fjy"]
@@ -120,9 +122,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0228705, 2.02619, -1.07007
 
 [node name="Conveior" parent="." instance=ExtResource("3_axeuq")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0858346, 0.695763, 4.9941)
+script = ExtResource("5_dt0r1")
+
+[node name="AudioPlayer2" type="AudioStreamPlayer3D" parent="Conveior"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.702657, 0)
+stream = ExtResource("6_qebug")
+volume_db = 3.38
+autoplay = true
+max_distance = 8.0
+playback_type = 1
 
 [node name="SubViewport" type="SubViewport" parent="."]
 canvas_item_default_texture_filter = 0
+audio_listener_enable_3d = true
 size = Vector2i(240, 240)
 size_2d_override_stretch = true
 render_target_update_mode = 4
@@ -835,11 +847,11 @@ input_ray_pickable = false
 script = ExtResource("24_i4fjy")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Day 1 Cube"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75483, 0.649376, -0.598542)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75483, 0.649376, -0.422567)
 shape = SubResource("BoxShape3D_hmc15")
 
 [node name="ClockOut" parent="Day 1 Cube" instance=ExtResource("26_pt3ps")]
-transform = Transform3D(0.304718, 0, 0, 0, 0.209247, 0, 0, 0, 0.209247, -1.45889, 0.76035, -0.426116)
+transform = Transform3D(0.320294, 0, 0, 0, 0.232649, 0, 0, 0, 0.209247, -1.57162, 0.76035, -0.426116)
 skeleton = NodePath("../..")
 
 [node name="Day 2 Cube" type="Area3D" parent="."]
@@ -907,7 +919,7 @@ shape = SubResource("BoxShape3D_xbk3s")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65364, 1.1035, -22.7205)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.359334, 1.4569, 1.86283)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.393695, 1.4569, 1.86095)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.359375, 0.475098, -0.368896)

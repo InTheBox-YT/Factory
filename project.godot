@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 SteamSettings="*res://Scripts/SteamSettings.gd"
+PauseMenu="*res://Scripts/pause_menu.gd"
 
 [display]
 
@@ -33,6 +34,7 @@ window/vsync/vsync_mode=0
 
 folder_colors={
 "res://Arms/": "teal",
+"res://Audio/": "pink",
 "res://Materials/": "yellow",
 "res://Models/": "orange",
 "res://Scenes/": "blue",
