@@ -201,6 +201,12 @@ use_collision = true
 size = Vector3(22.0153, 1, 49.4102)
 material = ExtResource("4_1cojt")
 
+[node name="CSGBox3D4" type="CSGBox3D" parent="Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.69782, 4.58006, -18.1919)
+use_collision = true
+size = Vector3(22.0153, 1, 49.4102)
+material = ExtResource("4_1cojt")
+
 [node name="CSGBox3D2" type="CSGBox3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6883, 0, -0.843617)
 use_collision = true

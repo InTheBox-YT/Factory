@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://cpsbde4pebr01"]
+[gd_scene load_steps=11 format=3 uid="uid://cpsbde4pebr01"]
 
 [ext_resource type="Script" uid="uid://btk1biox2aouv" path="res://Scripts/converter_area.gd" id="1_0rc8x"]
-[ext_resource type="PackedScene" uid="uid://c6idoifusc02t" path="res://Scenes/WateringCan.tscn" id="2_37sf6"]
 [ext_resource type="Material" uid="uid://d1rwv737cvubm" path="res://Materials/blackconc.tres" id="3_6qp44"]
 [ext_resource type="Script" uid="uid://cvqs5t7aeyu4h" path="res://Scripts/Convior.gd" id="3_gp2dr"]
 [ext_resource type="Material" uid="uid://bswswcs1gqfbu" path="res://Materials/conveior.tres" id="4_6qp44"]
@@ -27,7 +26,6 @@ size = Vector3(0.126965, 4.39209, 10.7529)
 
 [node name="ConverterArea" type="Area3D" parent="."]
 script = ExtResource("1_0rc8x")
-crafted_item_scene = ExtResource("2_37sf6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ConverterArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21283, 1.27646, -0.264648)
