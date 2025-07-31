@@ -142,6 +142,10 @@ _data = {
 [node name="World" type="Node3D"]
 script = ExtResource("1_qebug")
 
+[node name="PauseMenu" parent="." instance=ExtResource("23_no8kt")]
+top_level = true
+script = null
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_aqk2v")
 camera_attributes = SubResource("CameraAttributesPractical_036b0")
@@ -1003,8 +1007,6 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0, 0, 0, 1)
-
-[node name="PauseMenu" parent="." instance=ExtResource("23_no8kt")]
 
 [connection signal="area_entered" from="Day 1 Cube" to="Day 1 Cube" method="_on_area_entered"]
 [connection signal="area_entered" from="Day 2 Cube" to="Day 2 Cube" method="_on_area_entered"]
