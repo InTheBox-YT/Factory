@@ -30,17 +30,3 @@ func _physics_process(delta: float) -> void:
 		pmenu.hide()
 		Engine.time_scale = 1
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-func pauseMenu():
-	if paused:
-		pmenu.hide()
-		Engine.time_scale = 1
-		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-		#player.show()
-	else:
-		pmenu.show()
-		Engine.time_scale = 0
-		#player.hide()
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
-	paused = !paused
