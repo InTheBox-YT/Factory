@@ -46,23 +46,23 @@ mass = 2.0
 script = ExtResource("1_4tgkn")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 7.10543e-15, 0, -7.10543e-15, 1, 0, 0, 0, 1, -0.0216117, 0.110046, 0.200718)
+transform = Transform3D(0.235, 5.32907e-15, 0, -5.32907e-15, 0.235, 0, 0, 0, 0.235, -0.00110081, 0.00405832, -0.0125951)
 shape = SubResource("BoxShape3D_alpua")
 
-[node name="Cube_002" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.05639, -0.485358, 1.00369, -1.16162e-08, 1.66913, 0.807145, -0.795039, -0.644911, 1.33364, 0, 0, 0.861047)
+[node name="Cube_002" type="MeshInstance3D" parent="CollisionShape3D5"]
+transform = Transform3D(1.05639, -0.485359, 1.00369, -1.16162e-08, 1.66913, 0.807144, -0.795039, -0.64491, 1.33364, 0.0216117, -0.110046, 0.660329)
 mesh = SubResource("ArrayMesh_7jp0a")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_4tgkn")
 
-[node name="Cube_003" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.846836, -0.602332, -0.29127, 0.477129, 1.06905, 0.516964, 2.05829e-22, -0.593372, 1.22706, 0.546561, 2.38909e-08, -0.600789)
+[node name="Cube_003" type="MeshInstance3D" parent="CollisionShape3D5"]
+transform = Transform3D(0.846836, -0.602331, -0.291271, 0.477129, 1.06905, 0.516964, 0, -0.593372, 1.22706, 0.568173, -0.110046, -0.801507)
 mesh = SubResource("ArrayMesh_7jp0a")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_4tgkn")
 
-[node name="Cube_004" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.925667, 0.374332, 0.181016, -0.296522, 1.16857, 0.565087, 2.05829e-22, -0.593372, 1.22706, -0.0819699, 0.435341, -0.600789)
+[node name="Cube_004" type="MeshInstance3D" parent="CollisionShape3D5"]
+transform = Transform3D(0.925667, 0.374332, 0.181016, -0.296522, 1.16857, 0.565087, 0, -0.593372, 1.22706, -0.0603582, 0.325295, -0.801507)
 mesh = SubResource("ArrayMesh_7jp0a")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_4tgkn")
